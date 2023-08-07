@@ -1,0 +1,7 @@
+<resources>
+    <dimen name="wheel_progress_radius">45dp</dimen>
+    <dimen name="wheel_progress_radius_small">40dp</dimen>
+    <dimen name="crazy_dialog_title_size">22px</dimen>
+    <dimen name="crazy_dialog_content_size">14px</dimen>
+
+</resources>

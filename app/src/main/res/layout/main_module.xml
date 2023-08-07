@@ -1,0 +1,215 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="60dp"
+    android:background="@color/dark_grey"
+    android:scrollbars="none">
+
+    <ScrollView
+        android:id="@+id/scroll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:fillViewport="true">
+
+        <LinearLayout xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+                <com.yibo.yiboapp.views.LobbyHeaderView
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:background="@color/driver_line_color">
+                <!-- 快捷功能项和四个模块-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1.0"
+                    android:orientation="vertical">
+
+                    <!--第一行-->
+                    <LinearLayout
+                        android:id="@+id/first_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <!--彩票模块-->
+                        <RelativeLayout
+                            android:id="@+id/caipiao_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginBottom="2dp"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/caipiao_icon"
+                            android:clickable="true"
+                            android:orientation="vertical">
+
+                        </RelativeLayout>
+
+                        <!--体育-->
+                        <RelativeLayout
+                            android:id="@+id/sport_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginBottom="2dp"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/sport_module_icon"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            tools:ignore="SpeakableTextPresentCheck" >
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <!--第二行-->
+                    <LinearLayout
+                        android:id="@+id/second_line"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <!--真人模块-->
+                        <RelativeLayout
+                            android:id="@+id/zhenren_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/realman_module_icon"
+                            android:clickable="true"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:orientation="vertical">
+                        </RelativeLayout>
+
+                        <!--电子-->
+                        <RelativeLayout
+                            android:id="@+id/game_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginTop="2dp"
+                            tools:ignore="SpeakableTextPresentCheck"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/dianzi_module_icon"
+                            android:clickable="true"
+                            android:orientation="vertical">
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                    <!-- 只有彩票情况下，显示gridview图-->
+                    <GridView
+                        android:id="@+id/caipiao_module"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_weight="1.0"
+                        android:background="@color/colorWhite"
+                        android:focusable="false"
+                        android:focusableInTouchMode="false"
+                        android:horizontalSpacing="0dp"
+                        android:numColumns="3"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:verticalSpacing="0dp"
+                        android:visibility="gone" />
+
+                </LinearLayout>
+                <!--悬浮的常用游戏按钮-->
+                <RelativeLayout
+                    android:id="@+id/usual_btn_layout"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="30dp"
+                    android:clickable="true"
+                    android:visibility="gone">
+
+                    <com.yibo.yiboapp.ui.CircleImageView
+                        android:id="@+id/usual_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/default_red"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="4dp" />
+
+                    <TextView
+                        android:id="@+id/txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="20dp"
+                        android:text="足球"
+                        android:textColor="@color/white"
+                        android:textSize="20sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/sec_txt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/txt"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:ellipsize="start"
+                        android:singleLine="true"
+                        android:text="今日赛事-总入球"
+                        android:textColor="@color/white"
+                        android:textSize="12sp" />
+
+                </RelativeLayout>
+
+
+            </FrameLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/tv_online_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#4D000000"
+        android:padding="2dp"
+        android:text="在线人数"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="30dp"
+    android:background="@color/simple_color_child_bg"
+    android:gravity="center"
+    android:weightSum="5">
+
+    <ImageView
+        android:id="@+id/iv_select_state"
+        android:layout_width="0dp"
+        android:layout_height="10dp"
+        android:layout_marginStart="10dp"
+        android:layout_weight="0.5"
+        android:src="@drawable/icon_play_rules_checked" />
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="0dp"
+        android:layout_height="30dp"
+        android:layout_weight="4"
+        android:gravity="center"
+        android:lines="1"
+        android:orientation="vertical"
+        android:text="我是子项"
+        android:textSize="12sp" />
+
+    <ImageView
+        android:id="@+id/tv_indictor"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginEnd="10dp"
+        android:layout_weight="0.8" />
+
+</LinearLayout>

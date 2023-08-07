@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_weight="1.0"
+    android:background="@drawable/caipiao_item_bg"
+    tools:context="com.yibo.yiboapp.JianJingTouzhuActivity">
+
+    <LinearLayout
+        android:id="@+id/notice_layout"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="35dp">
+
+        <TextView
+            android:id="@+id/kaijian_result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/icon_speaker"
+            android:drawablePadding="5dp"
+            android:ellipsize="marquee"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:gravity="center_vertical"
+            android:lines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:paddingLeft="10dp"
+            android:text="第43141324期: 5,3,1,12,6"
+            android:textSize="14sp"/>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:background="@color/lightgrey"
+            />
+
+        <TextView
+            android:id="@+id/history_results"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:lines="1"
+            android:textSize="14sp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:drawableRight="@drawable/pulldown"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:background="@drawable/caipiao_item_bg"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:text="@string/history_caipiao_result"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_dark_horizontal"/>
+
+    <LinearLayout
+        android:id="@+id/touzhu_area"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="vertical"
+        android:layout_alignParentStart="true">
+
+        <!--<include-->
+            <!--android:id="@+id/pane"-->
+            <!--layout="@layout/xlistview_without_animation"/>-->
+
+        <ListView
+            android:id="@+id/pane"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:descendantFocusability="beforeDescendants"
+            android:fadingEdge="none"
+            >
+        </ListView>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/bottom_func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        >
+        <com.yibo.yiboapp.ui.BallonView
+            android:id="@+id/clear_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/clear_str"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:shadowColor="@color/grey"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/touzhu_btn_selector"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/clear_btn"
+            android:layout_toLeftOf="@+id/touzhu_btn"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/zhushu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="0注"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/light_gred_border_left_selector"
+                />
+
+            <TextView
+                android:id="@+id/jianjing"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_weight="1.0"
+                android:text="奖金:0元"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:layout_marginLeft="-2dp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/light_gred_border_middle_segment_selector"
+                />
+
+            <TextView
+                android:id="@+id/total_fee"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="0元"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:layout_marginLeft="-2dp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/light_gred_border_middle_segment_selector"
+                />
+
+            <TextView
+                android:id="@+id/setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="@string/zhudang_setting_string"
+                android:lines="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:layout_marginLeft="-2dp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/light_gred_border_right_segment_selector"
+                />
+
+        </LinearLayout>
+        <com.yibo.yiboapp.ui.BallonView
+            android:id="@+id/touzhu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/add_to_cart"
+            android:textSize="14sp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:shadowColor="@color/grey"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/touzhu_btn_selector"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.ihsg:PatternLocker:2.5.4@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/49c8d3d47a61cbcf40672f840b2b1685/transformed/jetified-PatternLocker-2.5.4/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/49c8d3d47a61cbcf40672f840b2b1685/transformed/jetified-PatternLocker-2.5.4/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/49c8d3d47a61cbcf40672f840b2b1685/transformed/jetified-PatternLocker-2.5.4/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.ihsg/PatternLocker/2.5.4/dafb0d17156148230ae31f20588697c50ad8f963/PatternLocker-2.5.4-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,174 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:tools="http://schemas.android.com/tools"
+              android:layout_width="fill_parent"
+              android:layout_height="fill_parent"
+              android:orientation="vertical">
+
+    <include
+            android:id="@+id/title"
+            layout="@layout/top_title"/>
+
+    <LinearLayout
+        android:id="@+id/input_area"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dip"
+        android:layout_marginRight="30dip"
+        android:orientation="vertical"
+        android:layout_marginTop="5dip"
+        android:paddingTop="40dip">
+
+        <!-- 旧密码 -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dip">
+
+            <LinearLayout
+                android:id="@+id/user_right_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/above"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.yibo.yiboapp.ui.XEditText
+                        android:id="@+id/old_pwd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/input_frame_bg"
+                        android:clickable="true"
+                        android:longClickable="false"
+                        android:drawablePadding="0dip"
+                        android:focusable="true"
+                        android:hint="@string/hint_oldpwd"
+                        android:inputType="textPassword"
+                        android:imeOptions="actionNext"
+                        android:maxLines="1"
+                        android:drawableLeft="@drawable/icon_auto_pass"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="8dip"
+                        android:singleLine="true"
+                        android:textColor="#3E3D3D"
+                        android:textColorHint="@color/input_text_hint"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 新密码 -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.yibo.yiboapp.ui.XEditText
+                        android:id="@+id/new_pwd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/input_frame_bg"
+                        android:drawableLeft="@drawable/icon_auto_pass"
+                        android:drawablePadding="0dip"
+                        android:hint="@string/hint_newpwd"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:longClickable="false"
+                        android:maxLines="1"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="8dip"
+                        android:textColor="#3E3D3D"
+                        android:textColorHint="@color/input_text_hint" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+        <!-- 确认新密码 -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dip">
+
+            <LinearLayout
+                android:id="@+id/pwd_right_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <com.yibo.yiboapp.ui.XEditText
+                        android:id="@+id/confirm_pwd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1.0"
+                        android:background="@drawable/input_frame_bg"
+                        android:drawableLeft="@drawable/icon_auto_pass"
+                        android:drawablePadding="0dip"
+                        android:hint="@string/hint_confirmpwd"
+                        android:imeOptions="actionDone"
+                        android:inputType="textPassword"
+                        android:longClickable="false"
+                        android:maxLines="1"
+                        android:paddingBottom="8dip"
+                        android:paddingLeft="10dip"
+                        android:paddingRight="10dip"
+                        android:paddingTop="8dip"
+                        android:textColor="#3E3D3D"
+                        android:textColorHint="@color/input_text_hint" />
+
+                    <ImageView
+                        android:id="@+id/switch_pwd"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dip"
+                        android:visibility="gone"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"/>
+                </LinearLayout>
+
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/confirm_change"
+        android:textSize="14sp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/exit_btn_bg"/>
+
+
+</LinearLayout>

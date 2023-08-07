@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="8dp">
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.66"/>
+
+    <TextView
+        android:id="@+id/tagType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:text="@string/suggestion_type"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/textType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tagType"
+        app:layout_constraintLeft_toRightOf="@id/tagType"
+        android:text="提交建議"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tagStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tagType"
+        app:layout_constraintLeft_toLeftOf="@id/guideline"
+        android:text="@string/suggestion_status"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/textStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tagStatus"
+        app:layout_constraintLeft_toRightOf="@id/tagStatus"
+        android:text="待回覆"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tagDatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tagType"
+        app:layout_constraintLeft_toLeftOf="@id/tagType"
+        android:layout_marginTop="6dp"
+        android:text="@string/suggestion_datetime"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/textDatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tagDatetime"
+        app:layout_constraintLeft_toRightOf="@id/tagDatetime"
+        android:text="2020-09-05 16:22:15"
+        android:textSize="16sp"
+        android:textColor="#088b27"/>
+
+    <TextView
+        android:id="@+id/tagDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/tagType"
+        app:layout_constraintTop_toBottomOf="@id/tagDatetime"
+        android:layout_marginTop="6dp"
+        android:text="@string/suggestion_description"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/textDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tagDescription"
+        android:layout_marginTop="6dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="回饋測試，就是一個testttttttttt"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/tagReplyDatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/textDescription"
+        app:layout_constraintLeft_toLeftOf="@id/tagType"
+        android:layout_marginTop="6dp"
+        android:text="@string/suggestion_reply_datetime"
+        android:textSize="16sp"/>
+
+    <TextView
+        android:id="@+id/textReplyDatetime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/tagReplyDatetime"
+        app:layout_constraintLeft_toRightOf="@id/tagReplyDatetime"
+        android:text="2020-09-05 16:22:15"
+        android:textSize="16sp"
+        android:textColor="#088b27"/>
+</androidx.constraintlayout.widget.ConstraintLayout>

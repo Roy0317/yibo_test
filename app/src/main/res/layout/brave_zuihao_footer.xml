@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        >
+
+        <TextView
+            android:id="@+id/total_qishu"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:textSize="16sp"
+            android:text="@string/zuihao_total_qishu_format"
+            />
+
+        <TextView
+            android:id="@+id/total_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:textSize="16sp"
+            android:gravity="right"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/zuihao_total_money_format"
+            />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/driver_line_color"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="10dp"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        >
+
+        <CheckBox
+            android:id="@+id/zuihao_checkbox"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:layout_gravity="center_vertical"
+            android:text="@string/stop_zuihao_after_win"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/grey"
+            android:visibility="visible"
+            android:textSize="16sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginRight="5dp"
+                android:text="追"
+                />
+
+            <TextView
+                android:id="@+id/jian"
+                android:layout_width="48dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="@mipmap/jian_icon"
+                />
+
+            <com.yibo.yiboapp.ui.XEditText
+                android:id="@+id/qihao_input"
+                android:layout_width="50dp"
+                android:layout_height="35dp"
+                android:background="@mipmap/brave_input_bg"
+                android:clickable="true"
+                android:longClickable="false"
+                android:drawablePadding="0dip"
+                android:focusable="true"
+                android:imeOptions="actionDone"
+                android:text="10"
+                android:inputType="number"
+                android:gravity="center"
+                android:maxLines="1"
+                android:textSize="16sp"
+                android:singleLine="true"
+                android:textColor="#3E3D3D"
+                android:textColorHint="@color/input_text_hint"/>
+
+            <TextView
+                android:id="@+id/add"
+                android:layout_width="48dp"
+                android:layout_height="35dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:background="@mipmap/jia_icon"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:layout_marginLeft="5dp"
+                android:text="期"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

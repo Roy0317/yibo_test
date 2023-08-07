@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="http://schemas.android.com/apk/res/android">
+
+    <string name="app_name">crazy</string>
+    <string name="cancel">取消</string>
+    <string name="confirm">确定</string>
+    <string name="please_wait">请稍候...</string>
+    <string name="continue_text">继续</string>
+    <string name="background_exec">后台执行</string>
+    <string name="network_invalid">当前没有网络连接，请检查网络</string>
+
+</resources>

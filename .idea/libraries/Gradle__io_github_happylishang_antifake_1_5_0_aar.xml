@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: io.github.happylishang:antifake:1.5.0@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/614bd49c954e75e9707f41940dcbe497/transformed/jetified-antifake-1.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/614bd49c954e75e9707f41940dcbe497/transformed/jetified-antifake-1.5.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/614bd49c954e75e9707f41940dcbe497/transformed/jetified-antifake-1.5.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/io.github.happylishang/antifake/1.5.0/a89745eab258d5f165243379f052a04f96f15880/antifake-1.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

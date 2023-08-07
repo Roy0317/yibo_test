@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">IMmodule</string>
+
+    <string name="normal">按住 说话</string>
+    <string name="recording">松开 结束</string>
+    <string name="want_to_cancle">松开手指，取消发送</string>
+    <string name="shouzhishanghua">手指上滑，取消发送</string>
+    <string name="tooshort">录音时间过短</string>
+    <string name="toolong">录音时间过长</string>
+    <string name="more">更多</string>
+    <string name="maintaince_page">网站维护</string>
+    <string name="hint_account">请输入帐号</string>
+    <string name="hint_pwd">请输入密码</string>
+    <string name="login">登录</string>
+    <string name="login_ongoing">正在登录中...</string>
+    <string name="login_fail">登录失败</string>
+    <string name="authority_ongoing">授权中...</string>
+    <string name="authority_fail">原生聊天室授权失败</string>
+    <string name="login_chat_fail">聊天室登录失败</string>
+    <string name="login_chat_ongoing">聊天室登录中...</string>
+    <string name="chat_room_connecting">聊天室连接中...</string>
+    <string name="get_chat_room_list_fail">获取聊天室列表失败</string>
+    <string name="room_list_empty">没有房间</string>
+    <string name="novalid_room">没有找到合适的房间</string>
+    <string name="join_chat_room_fail">进入聊天室失败</string>
+    <string name="join_chat_room_ongoing">进入聊天室中...</string>
+    <string name="join_private_chat_fail">进入私聊失败</string>
+    <string name="get_chat_room_list_ongoing">获取房间列表中...</string>
+    <string name="send_msg_fail">消息发送失败</string>
+    <string name="up_loading_file">文件上传中...</string>
+    <string name="up_load_fail">文件上传失败！</string>
+    <string name="request_fail">请求异常！</string>
+    <string name="loading">加载中...</string>
+    <string name="pick_ongoing">正在领取中...</string>
+    <string name="get_sys_config_fail">获取系统开关失败</string>
+    <string name="please_into_room_first">请先进入房间!</string>
+    <string name="time_out">请求超时！</string>
+
+    <string name="welcome_txt"><![CDATA[欢迎<font color="#854AEA">%1$s</font>进入房间]]></string>
+    <string name="follow_bet">跟投</string>
+    <string name="all_follow_bet">合并跟投</string>
+
+    <string name="lottery_history_result_failed">获取历史开奖纪录失败</string>
+</resources>

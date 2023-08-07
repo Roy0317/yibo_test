@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="5dp"
+    android:paddingBottom="5dp"
+    android:textSize="12sp"
+    android:gravity="center"
+    android:id="@+id/cz"
+    android:lines="1"
+    android:clickable="true"
+    android:background="@drawable/caizhong_border_segment_selector"
+    android:text="分分彩">
+
+
+
+
+
+</TextView>

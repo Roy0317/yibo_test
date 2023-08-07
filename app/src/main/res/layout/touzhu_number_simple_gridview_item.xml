@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_horizontal"
+    android:clickable="false"
+    android:focusable="false"
+    android:touchscreenBlocksFocus="false"
+    android:focusableInTouchMode="false"
+    >
+    <com.yibo.yiboapp.widget.WheelView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scollball"
+        android:gravity="center"
+        android:visibility="visible"
+/>
+
+
+</LinearLayout>

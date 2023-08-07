@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/linearParent"
+    android:clickable="true"
+    android:background="@color/colorWhite"
+    tools:context=".mvvm.banking.ChargeSimpleActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/simple_top_title"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightgrey"
+                android:orientation="vertical">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/header"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImage="@drawable/member_headers"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    fresco:roundAsCircle="true"  />
+
+                <TextView
+                    android:id="@+id/text_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="****"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/text_account_balance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="3dp"
+                    android:text="余额：0元"
+                    android:textColor="@color/grey"
+                    android:textSize="18sp" />
+
+                <!-- 收款人信息-->
+
+
+                <LinearLayout
+                    android:id="@+id/linear_receiver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:id="@+id/text_receiver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:text="收款人:xxxxxx(xxxxxxxx)"
+                        android:textColor="@color/grey"
+                        android:textSize="16sp"
+                        android:gravity="center_horizontal"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/text_copy_receiver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="复制"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/blue_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linear_bank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginTop="3dp">
+                    <TextView
+                        android:id="@+id/bank_address"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginTop="3dp"
+                        android:text="开户行:暂无开户行"
+                        android:textColor="@color/grey"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:maxLines="1"
+                        android:ellipsize="end"
+                        android:layout_weight="1"/>
+                    <TextView
+                        android:id="@+id/copy_bank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="复制"
+                        android:layout_marginLeft="10dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:textColor="@color/blue_color"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/bank_pay_tip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="3dp"
+                    android:text="银行转帐后请输入金额并提交订单"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="16sp"
+                    android:textStyle="bold"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:gravity="center_horizontal"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="当前支付方式:"
+                        android:textSize="16sp" />
+
+                    <TextView
+                        android:id="@+id/charge_method_txt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:text="************"
+                        android:textSize="16sp" />
+
+                    <ImageView
+                        android:id="@+id/charge_method_img"
+                        android:layout_width="80dp"
+                        android:layout_height="30dp"
+                        android:visibility="visible"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:id="@+id/change_method"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:padding="10dp"
+                        android:text="@string/change_method_string"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="16sp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <!-- 充值扫码区域-->
+            <LinearLayout
+                android:id="@+id/qrcode_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/light_gred_border_middle_segment"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <ImageView
+                    android:id="@+id/qrcode"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/default_placeholder_picture"
+                    android:longClickable="true" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="40dp"
+                    android:layout_marginRight="40dp"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:text="扫码支付成功后，请填写充值金额，并点击确定充值，否则将无法成功到帐！"
+                    android:textColor="@color/colorPrimary" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="18dp">
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="充值金额"
+                        android:textColor="@color/grey"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/money_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:text="(最低充值金额1元)"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearUSDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="USDT汇率"
+                            android:textSize="18sp"/>
+
+                        <TextView
+                            android:id="@+id/textUSDTRate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:paddingBottom="12dip"
+                            android:paddingRight="12dip"
+                            android:paddingTop="12dip"
+                            android:textSize="18sp"
+                            android:textColor="#3E3D3D" />
+                    </LinearLayout>
+
+                    <include layout="@layout/view_divider_dark_horizontal" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+                        <TextView
+                            android:layout_width="120dp"
+                            android:layout_height="wrap_content"
+                            android:text="充值数量"
+                            android:textSize="18sp"/>
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/editUSDTNumber"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:clickable="true"
+                            android:drawablePadding="5dip"
+                            android:focusable="true"
+                            android:hint="请输入充值数量"
+                            android:imeOptions="actionNext"
+                            android:longClickable="false"
+                            android:maxLines="1"
+                            android:paddingBottom="12dip"
+                            android:paddingRight="12dip"
+                            android:paddingTop="12dip"
+                            android:singleLine="true"
+                            android:inputType="number"
+                            android:textSize="18sp"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint" />
+
+                        <!-- 右侧删除用户名区域 -->
+                        <LinearLayout
+                            android:id="@+id/usdt_clean"
+                            android:layout_width="30dip"
+                            android:layout_height="30dip"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dip"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:src="@mipmap/icon_delete" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <include layout="@layout/view_divider_dark_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="充值金额"
+                        android:textSize="18sp"/>
+
+                    <com.yibo.yiboapp.ui.XEditText
+                        android:id="@+id/input_money"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/colorWhite"
+                        android:clickable="true"
+                        android:drawablePadding="5dip"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/hint_charge_money"
+                        android:imeOptions="actionNext"
+                        android:inputType="phone"
+                        android:maxLines="1"
+                        android:paddingBottom="12dip"
+                        android:paddingRight="12dip"
+                        android:paddingTop="12dip"
+                        android:singleLine="true"
+                        android:textSize="18sp"
+                        android:textColor="#3E3D3D"
+                        android:textColorHint="@color/input_text_hint" />
+
+                    <!-- 右侧删除用户名区域 -->
+                    <LinearLayout
+                        android:id="@+id/money_clean"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dip"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/icon_delete" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <include layout="@layout/view_divider_dark_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/textMark"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:text="转帐备注"
+                        android:textSize="18sp"/>
+
+                    <com.yibo.yiboapp.ui.XEditText
+                        android:id="@+id/summary"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1.0"
+                        android:background="@color/colorWhite"
+                        android:clickable="true"
+                        android:drawablePadding="5dip"
+                        android:focusable="true"
+                        android:hint="@string/pay_summary_memo"
+                        android:imeOptions="actionNext"
+                        android:longClickable="false"
+                        android:maxLines="1"
+                        android:paddingBottom="12dip"
+                        android:paddingRight="12dip"
+                        android:paddingTop="12dip"
+                        android:singleLine="true"
+                        android:textSize="18sp"
+                        android:textColor="#3E3D3D"
+                        android:textColorHint="@color/input_text_hint" />
+
+                    <!-- 右侧删除用户名区域 -->
+                    <LinearLayout
+                        android:id="@+id/summar_clean"
+                        android:layout_width="30dip"
+                        android:layout_height="30dip"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="5dip"
+                            android:clickable="false"
+                            android:focusable="false"
+                            android:src="@mipmap/icon_delete" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="18dp"
+                android:background="@drawable/charge_money_btn_selector"
+                android:text="@string/confirm_charge"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

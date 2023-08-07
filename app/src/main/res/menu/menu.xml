@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/record"
+        android:title="@string/operate_record">
+        <menu>
+            <!--<item-->
+            <!--android:id="@+id/caipiao_record"-->
+            <!--android:icon="@drawable/img_progress"-->
+            <!--android:title="彩票投注记录" />-->
+            <!--<item-->
+            <!--android:id="@+id/lhc_record"-->
+            <!--android:icon="@drawable/img_progress"-->
+            <!--android:title="六合投注记录" />-->
+            <!--<item-->
+            <!--android:id="@+id/account_change_record"-->
+            <!--android:icon="@drawable/img_progress"-->
+            <!--android:title="用户帐变记录" />-->
+            <!--<item-->
+            <!--android:id="@+id/account_detail_record"-->
+            <!--android:icon="@drawable/img_progress"-->
+            <!--android:title="帐户明细记录" />-->
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/person_center"
+        android:title="@string/person_center">
+        <menu>
+            <item android:id="@+id/item_zhgl"
+                android:icon="@drawable/icon_zhgl_new"
+                android:title="@string/zhgl"/>
+            <item
+                android:id="@+id/item_yesj"
+                android:icon="@drawable/icon_yesj2_new"
+                android:title="@string/yesj" />
+            <item
+                android:id="@+id/login_pwd_change"
+                android:icon="@drawable/pwd_modify_icon2_new"
+                android:title="@string/pwd_modify" />
+            <item
+                android:id="@+id/account_pwd_change"
+                android:icon="@drawable/withdraw_record_icon2_new"
+                android:title="@string/account_pwd_modify" />
+
+            <item
+                android:id="@+id/item_mrjj"
+                android:icon="@drawable/mrjj_active_icon_new"
+                android:title="每日加奖活动" />
+            <item
+                android:id="@+id/item_zzzy"
+                android:icon="@drawable/zzzy_icon_new"
+                android:title="周周转运活动" />
+
+            <item android:id="@+id/item_coupon"
+                android:icon="@drawable/coupon_icon_new"
+                android:title="代金券中心"/>
+
+            <item android:id="@+id/item_recharge_card"
+                android:icon="@drawable/recharge_card_icon_new"
+                android:title="充值卡中心"/>
+
+            <item
+                android:id="@+id/message_center"
+                android:icon="@drawable/message_center2_new"
+                android:title="@string/message_center_string_slide" />
+
+            <item
+                android:id="@+id/exchange_score"
+                android:icon="@drawable/score_exchange_icon2_new"
+                android:title="@string/score_exchange_str"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/active_hall"
+                android:icon="@drawable/mrjj_active_icon2_new"
+                android:title="活动大厅"
+                android:visible="false"
+                />
+
+            <item
+                android:id="@+id/exchange_score_record"
+                android:icon="@drawable/score_record_icon_new"
+                android:title="积分兑换记录"
+                android:visible="false" />
+
+
+            <item
+                android:id="@+id/item_mining"
+                android:icon="@drawable/wakuang_active_icon_new"
+                android:title="挖矿活动"
+                android:visible="false" />
+            <item
+                android:id="@+id/fee_convert_item"
+                android:icon="@drawable/eduzh_icon_new"
+                android:title="额度转换"
+                android:visible="false" />
+
+            <item
+                android:id="@+id/active_item"
+                android:icon="@drawable/active_icon_new"
+                android:title="优惠活动"
+                android:visible="true" />
+
+            <item
+                android:id="@+id/luck_pan"
+                android:icon="@drawable/xingyun_dzp_icon_new"
+                android:title="幸运大转盘"
+                android:visible="true" />
+
+            <item
+                android:id="@+id/redpacket"
+                android:icon="@drawable/grab_red_envelope_new"
+                android:title="@string/red_packet_string"
+                android:visible="true" />
+
+            <item
+                android:id="@+id/direct_charge"
+                android:icon="@drawable/icon_direct_charge"
+                android:title="免提直充"
+                android:visible="true" />
+
+            <item
+                android:id="@+id/donate"
+                android:icon="@drawable/icon_donate"
+                android:title="会员乐捐"
+                android:visible="true" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/daili"
+        android:title="@string/daili_manager">
+        <menu>
+            <item
+                android:id="@+id/teamview"
+                android:icon="@drawable/team_all_data_icon_new"
+                android:title="@string/team_views" />
+            <item
+                android:id="@+id/userlist"
+                android:icon="@drawable/user_list_icon_new"
+                android:title="@string/userlist_str" />
+            <item
+                android:id="@+id/my_recommand"
+                android:icon="@drawable/my_recom_icon_new"
+                android:title="@string/myrecommand_str" />
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/setting"
+        android:title="@string/app_setting">
+        <menu>
+            <item
+                android:id="@+id/app_setting"
+                android:icon="@drawable/settings_icon2_new"
+                android:title="@string/str_setting" />
+            <item
+                android:id="@+id/contact_us"
+                android:icon="@drawable/contact_us_icon_new"
+                android:title="@string/contast_us_str" />
+            <item
+                android:id="@+id/suggestion"
+                android:icon="@drawable/icon_suggestion_new"
+                android:title="@string/feedback_title"/>
+            <item
+                android:id="@+id/exit_login"
+                android:icon="@drawable/exit_login_icon_new"
+                android:title="@string/exit_app" />
+
+        </menu>
+    </item>
+</menu>

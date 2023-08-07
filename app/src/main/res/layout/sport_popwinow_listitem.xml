@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_weight="1.0"
+    android:background="@color/light_color_red"
+    >
+
+    <TextView
+        android:id="@+id/liansai_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="世界杯2018洲际附加赛"
+        android:textSize="@dimen/list_text_big_size"
+        android:layout_alignParentLeft="true"
+        android:lines="1"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="40dp"
+        />
+
+    <TextView
+        android:id="@+id/team_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="洪都拉斯 vs 澳洲(1:2@13.5)"
+        android:textSize="@dimen/list_text_size"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/liansai_name"
+        android:lines="1"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="5dp"
+        />
+
+    <TextView
+        android:id="@+id/peilv_names"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="1:2@13.5"
+        android:lines="1"
+        android:textStyle="bold"
+        android:textSize="@dimen/list_text_size"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/team_names"
+        android:layout_marginLeft="40dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/play_category"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="全场-波胆"
+        android:textSize="@dimen/text_size_small"
+        android:layout_marginLeft="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginRight="40dp"
+        />
+
+
+</RelativeLayout>

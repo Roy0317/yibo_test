@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/driver_line_color"
+        >
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/convert_fee_string"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/convert_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="30dp"
+        android:text="转换方式：从 系统 转到 AG"
+        />
+
+    <LinearLayout
+        android:id="@+id/money_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:orientation="horizontal"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="20dp"
+        android:gravity="center">
+
+        <com.yibo.yiboapp.ui.XEditText
+            android:id="@+id/input_money"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/peilv_money_input_bg"
+            android:clickable="true"
+            android:longClickable="false"
+            android:drawablePadding="0dip"
+            android:focusable="true"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:inputType="number"
+            android:textSize="12sp"
+            android:hint="@string/input_peilv_money"
+            android:paddingLeft="20dp"
+            android:layout_marginRight="-1dp"
+            android:singleLine="true"
+            android:textColorHint="@color/lightgrey"
+            android:visibility="visible"/>
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/convert_money_str"
+            android:textSize="12sp"
+            android:clickable="false"
+            android:textColor="@color/color_red"
+            android:background="@drawable/peilv_confirm_bg"/>
+
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_dark_horizontal"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/cancel"
+            android:textSize="14sp"
+            android:layout_marginRight="0.5dp"
+            android:textColor="@color/grey"
+            android:background="@drawable/cancel_btn_bg"/>
+
+        <Button
+            android:id="@+id/convert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="0.5dp"
+            android:text="@string/convert_string"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/exit_btn_bg"/>
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

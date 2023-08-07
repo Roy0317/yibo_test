@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:id="@+id/item_room_list_main"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    >
+
+    <ImageView
+        android:id="@+id/item_room_list_bg_img"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        />
+
+
+        <ImageView
+            android:id="@+id/item_room_list_lock_img"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:layout_marginLeft="3dp"
+            android:src="@drawable/lock_room"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="25dp"
+            android:layout_marginTop="14dp"
+            android:orientation="vertical"
+            >
+
+            <TextView
+                android:id="@+id/item_room_list_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="游戏大厅"
+                android:textSize="20dp"
+                android:textColor="@color/winning_yellow"
+                />
+
+            <TextView
+                android:visibility="invisible"
+                android:id="@+id/item_room_list_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:text="ID:123456"
+                android:textSize="14dp"
+                android:textColor="@color/winning_yellow"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="5dp"
+                android:gravity="center"
+                android:background="@drawable/shape_room_list_bg"
+                >
+
+                <com.example.anuo.immodule.view.AlwaysMarqueeTextView
+                    android:id="@+id/item_room_list_notice"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/white"
+                    android:textSize="13sp" />
+
+                <ImageView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/room_people"
+                    />
+
+                <TextView
+                    android:id="@+id/item_room_list_people_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="3dp"
+                    android:layout_marginRight="20dp"
+                    android:text=""
+                    android:textSize="14.5sp"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+</RelativeLayout>

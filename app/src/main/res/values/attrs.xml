@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension"/>
+        <attr name="civ_border_color" format="color"/>
+        <attr name="civ_border_overlay" format="boolean"/>
+        <attr name="civ_fill_color" format="color"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProgressWheel">
+        <attr name="progressIndeterminate" format="boolean"/>
+        <attr name="barColor" format="color"/>
+        <attr name="rimColor" format="color"/>
+        <attr name="rimWidth" format="dimension"/>
+        <attr name="spinSpeed" format="float"/>
+        <attr name="barSpinCycleTime" format="integer"/>
+        <attr name="circleRadius" format="dimension"/>
+        <attr name="fillRadius" format="boolean"/>
+        <attr name="barWidth" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="TouzhuFuncView">
+        <attr name="view_size" format="dimension"/>
+        <attr name="view_string" format="string"/>
+        <attr name="view_category" format="integer"/>
+        <attr name="view_textcolor_normal" format="color"/>
+        <attr name="view_textcolor_select" format="color"/>
+        <attr name="view_clickable" format="boolean"/>
+        <attr name="view_unselect_drawable" format="reference"/>
+        <attr name="view_select_drawable" format="reference"/>
+        <attr name="view_click_anim_effect" format="boolean"/>
+    </declare-styleable>
+
+    <declare-styleable name="TableView">
+        <attr name="row_height" format="dimension"/>
+        <attr name="textcolor_normal" format="color"/>
+        <attr name="textcolor_select" format="color"/>
+        <attr name="unselect_drawable" format="reference"/>
+        <attr name="select_drawable" format="reference"/>
+        <attr name="click_anim_effect" format="boolean"/>
+        <attr name="text_size" format="dimension"/>
+        <attr name="table_count" format="integer"/>
+    </declare-styleable>
+
+    <declare-styleable name="LineBreakLayout">
+        <!--标签之间左右距离-->
+        <attr name="leftAndRightSpace" format="dimension" />
+        <!--标签行距-->
+        <attr name="rowSpace" format="dimension" />
+    </declare-styleable>
+
+    <declare-styleable name="luckpan">
+        <attr name="pannum"  format="integer"/>
+        <attr name="names" format="reference"/>
+        <attr name="icons"  format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="VerticalBannerView">
+        <attr name="gap" format="integer" />
+        <attr name="animDuration" format="integer"/>
+    </declare-styleable>
+
+    <!--确认订单自定义view-->
+    <declare-styleable name="ShowPayInfoView">
+        <attr name="spiView_left" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleProgressBar">
+        <attr name="min" format="integer" />
+        <attr name="max" format="integer" />
+        <attr name="progress" format="integer" />
+        <attr name="progressbarColor" format="color" />
+        <attr name="progressBarThickness" format="dimension" />
+    </declare-styleable>
+
+</resources>

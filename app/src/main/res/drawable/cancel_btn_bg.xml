@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ripple xmlns:android="http://schemas.android.com/apk/res/android"
+    android:color="@color/light_color_red" >
+
+    <item android:id="@android:id/mask"
+        android:drawable="@color/light_color_red" />
+    <item android:drawable="@color/driver_line_color"/>
+
+</ripple>

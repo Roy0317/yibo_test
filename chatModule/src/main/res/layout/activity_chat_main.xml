@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/chat_draw_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    tools:context=".activity.ChatMainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/title"
+            layout="@layout/chat_top_title" />
+
+        <com.example.anuo.immodule.view.FullScreenLinearLayout
+            android:id="@+id/ll_parent"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/title"
+            android:fitsSystemWindows="true"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+
+            <include layout="@layout/top_info" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/chat_tip_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tagNotice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:gravity="center_vertical"
+                    android:text="最新公告 :"
+                    android:textColor="@color/red2"
+                    android:textSize="14sp" />
+
+
+                <com.example.anuo.immodule.view.ChatMainMarqueeTextView
+                    android:id="@+id/notice_tip"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="10dp"
+                    android:ellipsize="marquee"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true"
+                    android:gravity="center_vertical"
+                    android:marqueeRepeatLimit="marquee_forever"
+                    android:singleLine="true"
+                    android:text=""
+                    android:textColor="@color/dark_gray_2"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_chat_content"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <androidx.viewpager.widget.ViewPager
+                    android:id="@+id/chat_vp_result"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:clipToPadding="false"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:visibility="visible" />
+
+                <ImageButton
+                    android:id="@+id/imageMore"
+                    android:layout_width="match_parent"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center_horizontal"
+                    android:src="@drawable/down"
+                    android:tint="@color/black"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:id="@+id/llContent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <FrameLayout
+                        android:id="@+id/fl_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                            android:id="@+id/swipe_chat"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rv_chat_list"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scrollbars="vertical" />
+                        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+                        <TextView
+                            android:id="@+id/tv_new_msg_tip"
+                            android:layout_width="25dp"
+                            android:layout_height="30dp"
+                            android:layout_gravity="end|bottom"
+                            android:layout_marginRight="14px"
+                            android:background="@mipmap/icon_new_msg"
+                            android:gravity="center"
+                            android:paddingBottom="3dp"
+                            android:text=""
+                            android:textColor="@color/white"
+                            android:textSize="10sp"
+                            android:visibility="gone" />
+
+                        <com.example.anuo.immodule.view.fire.FireView
+                            android:id="@+id/fv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent" />
+
+                        <RelativeLayout
+                            android:id="@+id/act_chat_main_welcome_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="120dp"
+                            android:layout_marginTop="100dp"></RelativeLayout>
+
+                    </FrameLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#d9d9d9" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="#f3f3f3"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_not_allowed_talk"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="房间全体禁言"
+                            android:textSize="@dimen/sp_16"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:id="@+id/tv_ban_talk"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="您已被管理员禁言"
+                            android:textSize="@dimen/sp_16"
+                            android:visibility="gone" />
+
+                        <ImageView
+                            android:id="@+id/ivAudio"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10px"
+                            android:src="@mipmap/ic_audio"
+                            android:visibility="visible" />
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:focusable="true"
+                            android:focusableInTouchMode="true"
+                            android:paddingLeft="8dp"
+                            android:paddingTop="6dp"
+                            android:paddingRight="8dp"
+                            android:paddingBottom="6dp">
+
+                            <com.example.anuo.immodule.view.AitEditText
+                                android:id="@+id/et_content"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/message_shap_chat_bg"
+                                android:minHeight="36dp"
+                                android:paddingLeft="13dp"
+                                android:singleLine="true"
+                                android:textSize="15dp" />
+
+                            <com.example.anuo.immodule.view.RecordButton
+                                android:id="@+id/btnAudio"
+                                style="?android:attr/borderlessButtonStyle"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@drawable/shape_session_btn_voice_normal"
+                                android:text="按住说话"
+                                android:textSize="13dp"
+                                android:visibility="gone" />
+
+
+                        </RelativeLayout>
+
+                        <ImageView
+                            android:id="@+id/ivEmo"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_margin="10px"
+                            android:src="@mipmap/ic_emoji" />
+
+                        <ImageView
+                            android:id="@+id/ivAdd"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_marginLeft="10px"
+                            android:layout_marginRight="14px"
+                            android:src="@mipmap/ic_add" />
+
+                        <com.example.anuo.immodule.view.StateButton
+                            android:id="@+id/btn_send"
+                            android:layout_width="50dp"
+                            android:layout_height="30dp"
+                            android:layout_marginRight="10dp"
+                            android:padding="1dp"
+                            android:text="发送"
+                            android:textColor="@color/white"
+                            android:textSize="13dp"
+                            android:visibility="gone"
+                            app:normalBackgroundColor="#127CD6"
+                            app:pressedBackgroundColor="#0f519b"
+                            app:radius="5dp" />
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#d9d9d9" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/bottom_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+                <!--表情-->
+                <include
+                    android:id="@+id/rlEmotion"
+                    layout="@layout/include_emoji_layout"
+                    android:visibility="gone" />
+
+                <include
+                    android:id="@+id/llAdd"
+                    layout="@layout/include_add_layout"
+                    android:visibility="gone" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="47dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/chat_ibt_1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/chat_main_bg_kick_selector"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="投注"
+                    android:textColor="@color/chat_main_bg_kick_selector_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/chat_ibt_2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/chat_main_bg_form_selector"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="注单"
+                    android:textColor="@color/chat_main_bg_kick_selector_color"
+                    android:textSize="12sp" />
+
+                <ImageButton
+                    android:id="@+id/chat_ibt_3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:scaleType="centerInside"
+                    android:src="@mipmap/icon_tutorial"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/chat_ibt_6"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/chat_main_bg_plan_selector"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="计划"
+                    android:textColor="@color/chat_main_bg_kick_selector_color"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/chat_ibt_4"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/chat_main_bg_pay_selector"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="充值"
+                    android:textColor="@color/chat_main_bg_kick_selector_color"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/chat_ibt_5"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableTop="@drawable/chat_main_bg_withdraw_selector"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="提款"
+                    android:textColor="@color/chat_main_bg_kick_selector_color"
+                    android:textSize="12sp"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+        </com.example.anuo.immodule.view.FullScreenLinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fr_float"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="2dp"
+            android:visibility="invisible">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rec_float"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom" />
+
+            <ImageButton
+                android:id="@+id/float_ball"
+                android:layout_width="45dp"
+                android:layout_height="45dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/icon_fuli_chat"
+                android:clickable="false" />
+        </FrameLayout>
+    </RelativeLayout>
+
+    <include layout="@layout/chat_draw_right" />
+</androidx.drawerlayout.widget.DrawerLayout>

@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".mvvm.banking.PickMoneyActivity">
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title" />
+
+    <include
+        layout="@layout/listview_empty_view"
+        android:id="@+id/listview_empty"
+        android:visibility="gone" />
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:id="@+id/ll_background"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/lightgrey"
+                android:orientation="vertical">
+                <com.facebook.drawee.view.SimpleDraweeView
+                    android:id="@+id/header"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="40dp"
+                    android:clickable="true"
+                    app:civ_border_color="@color/colorWhite"
+                    app:civ_border_width="1dp"
+                    fresco:actualImageScaleType="fitCenter"
+                    fresco:placeholderImage="@drawable/member_headers"
+                    fresco:placeholderImageScaleType="fitCenter"
+                    fresco:roundAsCircle="true" />
+
+                <TextView
+                    android:id="@+id/name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="5dp"
+                    android:text="****"
+                    android:textColor="@color/white"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/left_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="3dp"
+                    android:layout_marginBottom="30dp"
+                    android:text="余额：0元"
+                    android:textColor="@color/white"
+                    android:textSize="14sp" />
+
+                <TextView
+                    android:id="@+id/cant_pick_toast"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:text="投注量未达标，不能提款"
+                    android:textColor="@color/white"
+                    android:visibility="gone" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+                <LinearLayout
+                    android:id="@+id/linearAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提款方式："
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <TextView
+                        android:id="@+id/textAccount"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/choose_withdraw_account"
+                        android:textSize="18sp"
+                        android:singleLine="true"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"
+                        android:paddingRight="12dip" />
+
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/arrow_down"
+                        android:tint="@color/gray"/>
+                </LinearLayout>
+
+                <include layout="@layout/view_divider_dark_horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/linearUSDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/textUSDTAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="USDT地址：1.2"
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <include layout="@layout/view_divider_dark_horizontal" />
+
+                    <TextView
+                        android:id="@+id/textUSDTRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="USDT匯率：1.2"
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <include layout="@layout/view_divider_dark_horizontal" />
+
+                    <TextView
+                        android:id="@+id/textUSDTNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="USDT數量："
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <include layout="@layout/view_divider_dark_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearBank"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/textBank"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="銀行卡號："
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <include layout="@layout/view_divider_dark_horizontal" />
+
+                    <TextView
+                        android:id="@+id/textRealName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="真實姓名："
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <include layout="@layout/view_divider_dark_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/linearAlipay"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <TextView
+                        android:id="@+id/textAlipay"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="支付寶帳號："
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <include layout="@layout/view_divider_dark_horizontal" />
+
+                    <TextView
+                        android:id="@+id/textAlipayName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="支付寶實名："
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <include layout="@layout/view_divider_dark_horizontal" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提款金额："
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <com.yibo.yiboapp.ui.XEditText
+                        android:id="@+id/input_money"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:background="@color/colorWhite"
+                        android:clickable="true"
+                        android:drawablePadding="5dip"
+                        android:focusable="true"
+                        android:focusableInTouchMode="true"
+                        android:hint="@string/hint_pick_money"
+                        android:imeOptions="actionNext"
+                        android:inputType="numberDecimal"
+                        android:maxLines="1"
+                        android:maxLength="9"
+                        android:paddingTop="12dip"
+                        android:paddingRight="12dip"
+                        android:paddingBottom="12dip"
+                        android:singleLine="true"
+                        android:textColor="#3E3D3D"
+                        android:textColorHint="@color/input_text_hint" />
+                </LinearLayout>
+
+                <include layout="@layout/view_divider_dark_horizontal" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="提款密码："
+                        android:textSize="18sp"
+                        android:paddingTop="12dip"
+                        android:paddingBottom="12dip"/>
+
+                    <com.yibo.yiboapp.ui.XEditText
+                        android:id="@+id/input_pwd"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="0dp"
+                        android:layout_weight="1.0"
+                        android:background="@color/colorWhite"
+                        android:clickable="true"
+                        android:drawablePadding="5dip"
+                        android:focusable="true"
+                        android:hint="@string/hint_pick_money_hint"
+                        android:imeOptions="actionNext"
+                        android:inputType="textPassword"
+                        android:longClickable="false"
+                        android:maxLines="1"
+                        android:paddingTop="12dip"
+                        android:paddingRight="12dip"
+                        android:paddingBottom="12dip"
+                        android:singleLine="true"
+                        android:textColor="#3E3D3D"
+                        android:textColorHint="@color/input_text_hint" />
+                </LinearLayout>
+
+                <include layout="@layout/view_divider_dark_horizontal" />
+
+                <LinearLayout
+                    android:id="@+id/act_pick_money_service_layout"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_text_color"
+                        android:text="手续费 :"
+                        />
+
+                    <TextView
+                        android:id="@+id/act_pick_money_service_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_text_color"
+                        android:layout_marginLeft="3dp"
+                        android:text=""
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textColor="@color/black_text_color"
+                        android:text="(今日可免费提款"
+                        />
+                    <TextView
+                        android:id="@+id/act_pick_money_free_times"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="3dp"
+                        android:textColor="@color/black_text_color"
+                        android:text=""
+                        />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black_text_color"
+                        android:text="次)"
+                        />
+
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="10dp"
+                android:background="@drawable/charge_money_btn_selector"
+                android:enabled="false"
+                android:text="@string/next_step_string"
+                android:textColor="@color/colorWhite"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:layout_marginBottom="20dp"
+                android:orientation="vertical"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp">
+
+                <TextView
+                    android:id="@+id/tip_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black_text_color"
+                    android:text="@string/pick_money_tip1" />
+
+                <TextView
+                    android:id="@+id/custom_rate"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:textColor="@color/black_text_color"
+                    android:text="@string/pick_money_tip2" />
+
+                <TextView
+                    android:id="@+id/custom_tips"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/dp_10"
+                    android:textColor="@color/red"
+                    android:text=""
+                    />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

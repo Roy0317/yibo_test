@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#99000000">
+
+    <LinearLayout
+        android:id="@+id/ll_chat_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/input_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginRight="30dip"
+            android:layout_marginTop="5dip"
+            android:orientation="vertical"
+            android:paddingTop="10dip">
+
+            <!-- 帐号 -->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dip">
+
+                <LinearLayout
+                    android:id="@+id/user_right_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/above"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/user_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/shape_input_bg"
+                            android:clickable="true"
+                            android:drawableLeft="@mipmap/icon_auto_login"
+                            android:drawablePadding="0dip"
+                            android:focusable="true"
+                            android:hint="@string/hint_account"
+                            android:imeOptions="actionNext"
+                            android:longClickable="false"
+                            android:maxLines="1"
+                            android:paddingBottom="8dip"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="8dip"
+                            android:singleLine="true"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/dark_gray_2" />
+
+                        <!-- 用户名右侧删除用户名区域 -->
+                        <LinearLayout
+                            android:id="@+id/clean_text"
+                            android:layout_width="30dip"
+                            android:layout_height="30dip"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dip"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:src="@mipmap/icon_delete" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 密码输入 -->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip">
+
+                <LinearLayout
+                    android:id="@+id/pwd_right_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <AutoCompleteTextView
+                            android:id="@+id/user_pwd"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/shape_input_bg"
+                            android:drawableLeft="@mipmap/icon_auto_pass"
+                            android:drawablePadding="0dip"
+                            android:hint="@string/hint_pwd"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:longClickable="false"
+                            android:maxLines="1"
+                            android:paddingBottom="8dip"
+                            android:paddingLeft="10dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="8dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/dark_gray_2" />
+
+                        <ImageView
+                            android:id="@+id/switch_pwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dip"
+                            android:clickable="true"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/shape_btn_bg"
+            android:text="@string/login"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>

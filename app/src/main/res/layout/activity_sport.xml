@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:id="@+id/item"
+    tools:context="com.yibo.yiboapp.activity.SportActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title" />
+
+
+    <com.yibo.yiboapp.views.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/menu_tabbar_height"
+        app:pstsIndicatorColor="@color/colorPrimary"
+        app:pstsUnderlineColor="@color/lightgrey"
+        app:pstsDividerColor="@color/lightgrey"
+        app:pstsIndicatorHeight="5dp"
+        app:pstsUnderlineHeight="0.5dp"
+        app:pstsShouldExpand="true"
+        android:background="@color/colorWhite" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        >
+    </androidx.viewpager.widget.ViewPager>
+
+    <Button
+        android:id="@+id/page_btn"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:background="@color/color_red"
+        android:textColor="@color/white"
+        android:text="1/1"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        />
+
+    <!--底部投注，清除等功能菜单-->
+    <RelativeLayout
+        android:id="@+id/bottom_func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="vertical"
+        >
+        <com.yibo.yiboapp.ui.BallonView
+            android:id="@+id/refresh_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:text="@string/refresh_sport"
+            android:textSize="14sp"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:shadowColor="@color/grey"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/touzhu_btn_selector"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:gravity="center"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@id/refresh_btn"
+            android:layout_toLeftOf="@+id/touzhu_btn"
+            android:orientation="horizontal"
+            >
+
+            <TextView
+                android:id="@+id/order_num"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="0单"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:clickable="true"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/light_gred_border_left_selector"
+                />
+
+            <TextView
+                android:id="@+id/game_count"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_weight="1.0"
+                android:text="0场"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:clickable="true"
+                android:visibility="visible"
+                android:layout_marginLeft="-2dp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/light_gred_border_middle_segment_selector"
+                />
+
+            <TextView
+                android:id="@+id/setting"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="查看"
+                android:lines="1"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:gravity="center"
+                android:clickable="true"
+                android:textSize="12sp"
+                android:layout_marginLeft="-2dp"
+                android:textColor="@color/colorPrimary"
+                android:background="@drawable/light_gred_border_right_segment_selector"
+                />
+
+        </LinearLayout>
+        <com.yibo.yiboapp.ui.BallonView
+            android:id="@+id/touzhu_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/touzhu_string"
+            android:textSize="14sp"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:clickable="true"
+            android:shadowColor="@color/grey"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/touzhu_btn_selector"/>
+    </RelativeLayout>
+
+</LinearLayout>

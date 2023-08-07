@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="使用带扫码功能的浏览器扫码可下载APP"
+        android:textColor="@color/tv_blue"
+        android:layout_marginTop="60dp"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"
+        />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_gravity="center"
+        android:background="@drawable/qrcode" />
+
+    <TextView
+        android:id="@+id/click_download"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="立即下载APP"
+        android:clickable="true"
+        android:layout_gravity="center"
+        android:textColor="@color/tv_blue"
+        android:layout_marginTop="10dp"
+        />
+
+</LinearLayout>

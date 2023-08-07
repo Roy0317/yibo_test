@@ -1,0 +1,176 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-parcelize'
+
+android {
+    signingConfigs {
+        auto_build {
+            keyAlias 'yibo'
+            keyPassword '123456'
+            storeFile file('autobuilder.jks')
+            storePassword '123456'
+        }
+
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    defaultConfig {
+        applicationId rootProject.ext.package_name
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.apk_code
+        //版本号以"v"开头将用于区别原生版与wap版app,
+        versionName "v98.9.99962"
+        multiDexEnabled true
+    }
+
+    //指定jdk版本
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //处理所有报META-INF/*'的错误
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/NOTICE'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+    }
+
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            signingConfig signingConfigs.auto_build
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'domain_url', "\"" + rootProject.ext.domain_url + "\""
+            buildConfigField 'String', 'host_domain', "\"" + rootProject.ext.host_domain + "\""
+            buildConfigField 'String', 'apk_code', "\"" + rootProject.ext.apk_code + "\""
+            buildConfigField 'Integer', 'startup_time', '3000'
+            manifestPlaceholders=[
+                    domain_url:rootProject.ext.domain_url
+            ]
+        }
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.auto_build
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField 'String', 'domain_url', "\"" + rootProject.ext.domain_url + "\""
+            buildConfigField 'String', 'host_domain', "\"" + rootProject.ext.host_domain + "\""
+            buildConfigField 'String', 'apk_code', "\"" + rootProject.ext.apk_code + "\""
+            buildConfigField 'Integer', 'startup_time', '3000'
+            manifestPlaceholders=[
+                    domain_url:rootProject.ext.domain_url
+            ]
+        }
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+
+//    sourceSets.main {
+//        jni.srcDirs = []
+//    }
+//
+//    //Could not find com.nbsp:library:1.8.
+//    repositories {
+//        flatDir {
+//            dirs 'libs'
+//        }
+//    }
+ //    aaptOptions {
+//        cruncherEnabled = false
+//    }
+//    dexOptions {
+//        incremental true
+//        javaMaxHeapSize "4g"
+//    }
+
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+//    compile project(':crazylibrary')
+    api project(':library')
+    api project(':chatModule')
+
+    implementation deps.kotlin
+    implementation deps.viewmodel_scope
+    implementation deps.lifecycle_scope
+    implementation deps.appcompat
+    implementation deps.recyclerview
+    implementation deps.constraintlayout
+    implementation deps.material
+    implementation deps.coroutines_android
+    implementation deps.coroutines_adapter
+    implementation deps.retrofit
+    implementation deps.retrofit_converter
+    implementation deps.retrofit_rx_adapter
+    implementation deps.retrofit_co_adapter
+    implementation deps.okhttp
+    implementation deps.okhttp_interceptor
+    implementation deps.glide
+    annotationProcessor deps.glide_compiler
+    implementation deps.gson
+    implementation deps.eventbus
+    implementation deps.socketio
+    implementation deps.cymchad_recycler
+    testImplementation deps.junit
+
+
+
+    implementation 'com.github.donkingliang:CustomBanner:1.1.2'
+    implementation 'me.majiajie:pager-bottom-tab-strip:2.2.2'
+    implementation('com.facebook.fresco:fresco:0.8.+') {
+        exclude group: 'com.nineoldandroids', module: 'library'
+    }
+    implementation 'com.astuetz:pagerslidingtabstrip:1.0.1'
+    implementation 'com.baoyz.swipemenulistview:library:1.3.0'
+    implementation 'androidx.dynamicanimation:dynamicanimation:1.0.0'
+    implementation 'me.leolin:ShortcutBadger:1.1.16@aar'
+    implementation 'com.github.donkingliang:GroupedRecyclerViewAdapter:1.3.7'
+    implementation 'com.google.zxing:core:3.2.0'
+
+    implementation 'com.facebook.stetho:stetho-okhttp3:1.5.1'
+    implementation 'com.blankj:utilcode:1.25.0'
+
+    //https://github.com/Blankj/AndroidUtilCode/blob/master/utilcode/README-CN.md
+    implementation 'com.github.hackware1993:MagicIndicator:1.5.0'
+    implementation 'com.azhon:appupdate:2.0.0'
+    implementation files('libs/tbs_sdk_thirdapp_v3.2.0.1104_43200_sharewithdownload_withfilereader_withoutGame_obfs_20170609_115346.jar')
+    //手势锁
+    implementation "com.github.ihsg:PatternLocker:2.5.4"
+    implementation 'com.facebook.rebound:rebound:0.3.8'
+    implementation 'com.wanjian:cockroach:0.0.5'
+
+    //竖直滚动View
+    implementation 'com.gongwen:marqueelibrary:1.1.3'
+    implementation 'com.google.android.gms:play-services-safetynet:15.0.0'
+
+    //行为验证
+    implementation(name:'captcha-release_v3.2.0', ext: 'aar')
+    //模拟器判断
+    implementation 'io.github.happylishang:antifake:1.5.0'
+}
+
+//chatModule
+configurations.all {
+    resolutionStrategy.eachDependency { DependencyResolveDetails details ->
+        def requested = details.requested
+        if (requested.group == 'com.android.support') {
+            if (!requested.name.startsWith("multidex")) {
+                details.useVersion '27.+'
+            }
+        }
+    }
+}

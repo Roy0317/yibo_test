@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yibo.yiboapp.activity.AppDownloadActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title" />
+
+    <LinearLayout
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        tools:context="com.yibo.yiboapp.activity.AppDownloadActivity">
+
+        <ImageView
+            android:id="@+id/appstore_icon"
+            android:clickable="true"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/store_btn"
+            android:layout_gravity="center_horizontal"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/appstore_qr_code"
+            android:clickable="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <ImageView
+            android:id="@+id/android_store_icon"
+            android:clickable="true"
+            android:layout_width="150dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/android_btn"/>
+
+        <com.facebook.drawee.view.SimpleDraweeView
+            android:id="@+id/android_store_qr_qode"
+            android:clickable="true"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center_horizontal"
+        />
+
+        <TextView
+            android:id="@+id/tv_info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="温馨提示:推荐使用支付宝或者浏览器扫码下载"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_horizontal"
+            />
+    </LinearLayout>
+
+
+</LinearLayout>

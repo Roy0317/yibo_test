@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/simple_color_group_bg"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_margin="3dp"
+        android:id="@+id/tv_lottery_type"
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:textSize="13sp"
+        android:background="@drawable/selector_simple_pop_window"
+        android:text="你好" />
+
+</LinearLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/light_color_red"
+        >
+
+        <TextView
+            android:id="@+id/payName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:layout_centerHorizontal="true"
+            android:text="暂无支付名"
+            android:textColor="@color/colorPrimary"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_color_red"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/min_fee"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
+            android:text="最小支付金额:0元"
+            android:textSize="16sp" />
+
+        <!-- 非可选固定金额时输入金额-->
+        <com.yibo.yiboapp.ui.XEditText
+            android:id="@+id/input_money"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/input_frame_bg"
+            android:drawablePadding="0dip"
+            android:focusable="true"
+            android:hint="请输入金额"
+            android:imeOptions="actionNext"
+            android:inputType="phone"
+            android:longClickable="false"
+            android:maxLines="1"
+            android:paddingBottom="8dip"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:paddingTop="8dip"
+            android:singleLine="true"
+            android:textColor="#3E3D3D"
+            android:textColorHint="@color/input_text_hint"
+            android:textSize="14sp" />
+
+        <!-- 可选固定金额gridview-->
+        <GridView
+            android:id="@+id/fix_moneys"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="5dp"
+            android:layout_weight="1.0"
+            android:numColumns="4"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:verticalSpacing="5dp"
+            android:horizontalSpacing="5dp"
+            android:visibility="gone">
+        </GridView>
+
+        <TextView
+            android:id="@+id/win_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:text="第三方支付是在线支付，在第三方支付平台完成支付"
+            android:textSize="12sp"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/front_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:layout_marginTop="10dp"
+            android:text="操作说明: 第三方支付是在线支付，在第三方支付平台完成支付"
+            android:textSize="12sp"
+            android:textColor="@color/red"
+            android:layout_marginBottom="10dp"
+            android:textStyle="bold"
+            android:autoLink="web"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:text="@string/cancel"
+            android:textSize="14sp"
+            android:layout_marginRight="0.5dp"
+            android:textColor="@color/grey"
+            android:background="@drawable/cancel_btn_bg"/>
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            android:layout_marginLeft="0.5dp"
+            android:text="@string/charge_money"
+            android:textSize="14sp"
+            android:textColor="@color/colorWhite"
+            android:background="@drawable/exit_btn_bg"/>
+
+
+    </LinearLayout>
+
+</LinearLayout>

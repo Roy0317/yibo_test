@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:id="@+id/play_rule_rexpand_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="3.0"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/play_rule"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="@color/colorWhite"
+                android:gravity="center"
+                android:text="玩法选择"
+                android:textColor="@color/color_red" />
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <ExpandableListView
+                android:id="@+id/expand_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0"
+                android:scrollbars="none" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:background="@color/dark_grey" />
+
+        <LinearLayout
+            android:id="@+id/pull_bar"
+            android:layout_width="25dp"
+            android:layout_height="match_parent"
+            android:background="@color/light_color_red"
+            android:clickable="true"
+            android:gravity="center"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/pull_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pull_back_icon" />
+
+            <TextView
+                android:id="@+id/pull_bar_txt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:ems="1"
+                android:gravity="center"
+                android:text="点击隐藏玩法栏"
+                android:textColor="@color/color_red" />
+
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/xlistview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@android:color/transparent"
+            android:cacheColorHint="@android:color/transparent"
+            android:descendantFocusability="beforeDescendants"
+            android:fadingEdge="none"></ListView>
+
+    </LinearLayout>
+
+    <!--底部投注，清除等功能菜单-->
+    <LinearLayout
+        android:id="@+id/bottom_func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+        <!--模式，倍数等-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/dark_grey"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:orientation="horizontal"
+                android:layout_gravity="center_vertical"
+                >
+
+            <Button
+                android:id="@+id/mode_btn"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/input_frame_bg"
+                android:text="元"
+                android:textColor="@color/tv_gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="模式"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            <com.yibo.yiboapp.ui.XEditText
+                android:id="@+id/beishu_input"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:hint="1"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:maxLength="7"
+                android:inputType="phone"
+                android:imeOptions="actionDone"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/input_frame_bg"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="倍"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical"
+                />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/history_record"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="历史投注"
+                android:clickable="true"
+                android:drawablePadding="5dp"
+                android:layout_marginRight="5dp"
+                android:drawableRight="@drawable/account_detail_record_icon"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center_vertical|right"
+                />
+
+        </LinearLayout>
+        <!--底部投注及金额-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="#e3000000"
+            android:layout_height="wrap_content">
+
+            <Button
+                android:id="@+id/clear_jixuan"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="机选"
+                android:layout_alignParentLeft="true"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/grey_corner_btn_bg"
+                />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                >
+
+                <TextView
+                    android:id="@+id/zhushu_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="已选0注"
+                    android:layout_gravity="center_horizontal"
+                    android:textColor="@color/white"
+                    />
+
+                <TextView
+                    android:id="@+id/money_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="共0元，盈利0元"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_below="@+id/zhushu_txt"
+                    android:textColor="@color/white"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="60dp"
+                android:layout_height="35dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="确定"
+                android:layout_alignParentRight="true"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/red_corner_btn_bg"
+                />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

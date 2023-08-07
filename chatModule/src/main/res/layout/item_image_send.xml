@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ll_text_send"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="30dp"
+    android:padding="5dp">
+
+    <com.example.anuo.immodule.view.CircleImageView
+        android:id="@+id/chat_item_header"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:scaleType="centerInside"
+        android:layout_marginTop="@dimen/dp_15"
+        android:src="@drawable/ic_default_header" />
+
+    <com.example.anuo.immodule.view.CircleImageView
+        android:id="@+id/chat_item_admin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_admin" />
+
+    <include
+        android:id="@+id/ll_msg_title"
+        layout="@layout/msg_title_send" />
+
+
+    <RelativeLayout
+        android:id="@+id/chat_item_layout_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/ll_msg_title"
+        android:layout_below="@id/ll_msg_title"
+        android:layout_marginTop="5dp">
+
+
+        <ImageView
+            android:id="@+id/bivPic"
+            android:layout_width="@dimen/image_default_dp"
+            android:layout_height="@dimen/image_default_dp"
+            android:layout_alignParentRight="true"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+            android:transitionName="sharedView"
+            />
+
+        <LinearLayout
+            android:id="@+id/item_image_send_load_layout"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@id/bivPic"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:scaleType="centerCrop"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/item_image_send_load_img"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="1dp"
+                android:src="@drawable/loading_img" />
+
+            <TextView
+                android:id="@+id/item_image_send_load_per"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/chat_item_fail"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/bivPic"
+            android:focusable="false"
+            android:src="@drawable/msg_state_fail_resend"
+            android:visibility="invisible" />
+
+        <ProgressBar
+            android:id="@+id/chat_item_progress"
+            style="@android:style/Widget.ProgressBar.Small.Inverse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@+id/bivPic"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

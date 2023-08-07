@@ -1,0 +1,115 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    ext.kotlin_version = '1.7.10'
+
+    repositories {
+//        mavenLocal()
+        google()
+        // jcenter() // <- 删除它
+        mavenCentral() // <- 添加它
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.3.1'
+//        classpath 'com.github.dcendents:android-maven-gradle-plugin:1.5' // Add this line
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+allprojects {
+    repositories {
+        google()
+        mavenLocal()
+
+        // jcenter() // <- 删除它
+        mavenCentral() // <- 添加它
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://www.jitpack.io' }
+        flatDir {
+            dirs '../chatModule/libs','libs'
+        }
+    }
+}
+
+/**
+ * 新打包及动态域名规则及注意事项：
+ * 1. domain_url 还是配置原来的打包域名(若有做证书则一定要以https://开头，否则可能报307)
+ * 2. station_real_domain 代表domain_url值为ip地址时对应的host域名
+ * 3. host_domain 不要加http://或https://前缀
+ * 4. 包名最后的.后面一定要与站点编号对应
+ * 5. 如果有'host_domain'，则host域名必须是与对应站点绑定好的
+ * 6. 之后打包，包名规则"com.xinfeiyun.uaii8912."+站点编号；安卓苹果都改成这个规则
+ *
+ */
+ext {
+    //todo: d001 奇怪的viewbinding問題
+//    package_name ="com.xinfeiyun.uaii8912.p116"
+//    domain_url = "https://skyp116.yb876.com" //请求域名或ip
+//    domain_url = "https://fhappfh.com" //请求域名或ip
+
+    package_name ="com.xinfeiyun.uaii8912.w000t0"
+    domain_url = "https://ybdemo.yibo44.com" //请求域名或ips
+//    domain_url = "https://skyw000t0.yb876.com" //请求域名或ip
+    apk_code = 230310001
+    host_domain = "" //请求时携带的站点绑定的host域名
+    compileSdkVersion = 32
+    minSdkVersion = 21
+    targetSdkVersion = 28
+
+    appcompat_version = "1.5.1"
+    constraint_version = "2.1.4"
+    material_version = "1.8.0"
+    scope_version = "2.4.0"
+    recyclerview_version = "1.2.0"
+    coroutines_android_version = "1.6.1"
+    retrofit_version = "2.7.2"
+    okhttp_version = "4.3.1"
+    glide_version = "4.6.1"
+    gson_version = "2.8.2"
+    eventbus_version = "3.1.1"
+    swiperefreshlayout_version = "1.1.0"
+    JSOUP_VERSION = "1.9.2"
+    //Rx
+    rxjava_version = "2.+"
+    rxandroid_version = "2.+"
+    RxBinding_version = "2.+"
+    cymchad_recycler_version = "2.9.30"
+    junit_version = "4.12"
+}
+
+    ext.deps = [
+        viewmodel_scope      : "androidx.lifecycle:lifecycle-viewmodel-ktx:${scope_version}",
+        lifecycle_scope      : "androidx.lifecycle:lifecycle-runtime-ktx:${scope_version}",
+        kotlin               : "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${kotlin_version}",
+        recyclerview         : "androidx.recyclerview:recyclerview:${recyclerview_version}",
+        appcompat            : "androidx.appcompat:appcompat:${appcompat_version}",
+        constraintlayout     : "androidx.constraintlayout:constraintlayout:${constraint_version}",
+        material             : "com.google.android.material:material:${material_version}",
+        coroutines_android   : "org.jetbrains.kotlinx:kotlinx-coroutines-android:${coroutines_android_version}",
+        coroutines_adapter   : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2",
+        retrofit             : "com.squareup.retrofit2:retrofit:${retrofit_version}",
+        retrofit_converter   : "com.squareup.retrofit2:converter-gson:${retrofit_version}",
+        retrofit_rx_adapter  : "com.squareup.retrofit2:adapter-rxjava2:${retrofit_version}",
+        retrofit_co_adapter  : "com.jakewharton.retrofit:retrofit2-kotlin-coroutines-adapter:0.9.2",
+        okhttp               : "com.squareup.okhttp3:okhttp:${okhttp_version}",
+        okhttp_interceptor   : "com.squareup.okhttp3:logging-interceptor:${okhttp_version}",
+        glide                : "com.github.bumptech.glide:glide:${glide_version}",
+        glide_compiler       : "com.github.bumptech.glide:compiler:${glide_version}",
+        gson                 : "com.google.code.gson:gson:${gson_version}",
+        eventbus             : "org.greenrobot:eventbus:${eventbus_version}",
+        swiperefreshlayout   : "androidx.swiperefreshlayout:swiperefreshlayout:${swiperefreshlayout_version}",
+        //解析html文本
+        jsoup                : "org.jsoup:jsoup:${JSOUP_VERSION}",
+        rxjava               : "io.reactivex.rxjava2:rxjava:${rxjava_version}",
+        rxandroid            : "io.reactivex.rxjava2:rxandroid:${rxandroid_version}",
+        rxbinding            : "com.jakewharton.rxbinding2:rxbinding:${RxBinding_version}",
+        socketio             : "io.socket:socket.io-client:1.0.0",
+        cymchad_recycler     : "com.github.CymChad:BaseRecyclerViewAdapterHelper:${cymchad_recycler_version}",
+        junit                : "junit:junit:${junit_version}",
+    ]

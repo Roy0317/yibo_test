@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#EC2829</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="color_bf">#ffbfbfbf</color>
+    <color name="color_black3">#333333</color>
+    <color name="color_black8">#888888</color>
+    <color name="halfColorPrimary">#30EC2829</color>
+    <color name="grey">#808080</color>
+    <color name="dark_grey">#F1F1F2</color>
+    <color name="driver_line_color">#F1F1F1</color>
+    <color name="driver_line_color2">#f3f3f3</color>
+    <color name="blue_color">#005fac</color>
+    <color name="light_blue_color">#20005fac</color>
+    <color name="color_red">#EC2829</color>
+    <color name="color_red_press">#EE4E5F</color>
+    <color name="light_color_red">#20EC2829</color>
+    <color name="lightgrey">#d3d3d3</color>
+    <color name="lightgrey_max">#e1e1e1</color>
+    <color name="input_text_hint">#C6C6C8</color>
+    <color name="progress_wheel_color">#00A5C4</color>
+    <color name="popmenu_item_divide_line">#1b1b1b</color>
+    <color name="color_light_blue">#FFF1EEFF</color>
+    <color name="tv_gray">#666666</color>
+    <color name="tv_blue">#308BE9</color>
+    //蓝色
+    <color name="green">#80D63D</color>
+    //绿色
+    <color name="divider_gray">#d9d9d9</color>//细分割线颜色
+    <color name="light_gray">#f1eeee</color>
+    <color name="child_item_diveder">#D6D6D5</color>
+    <color name="peilv_table_bg">#20EC2829</color>
+    <color name="bottom_tabbar_check_color_default">#888888</color>
+    <color name="bottom_tabbar_check_color_select">#FF4C4C</color>
+    <color name="popup_func_color">#30ffffff</color>
+    <color name="black_semi_transparent">#B2000000</color>
+    <color name="background">#e5e5e5</color>
+    <color name="half_black">#808080</color>
+    <color name="white">#ffffff</color>
+    <color name="black">#000000</color>
+    <color name="white_pressed">#f1f1f1</color>
+    <color name="pink">#e91e63</color>
+    <color name="pink_pressed">#ec407a</color>
+    <color name="blue_semi_transparent">#805677fc</color>
+    <color name="blue_semi_transparent_pressed">#80738ffe</color>
+    <color name="red_pressed">#ff00ff</color>
+    <color name="red">#ff0000</color>
+    <color name="orange">#FF8000</color>
+    <color name="menu_plus">#0000ff</color>
+    <color name="color_line">#80bfbfbf</color>
+    <!--可选中的文字  未选中颜色状态-->
+    <color name="color_txt_normal">#666666</color>
+    <!--可选中的文字  选中颜色-->
+    <color name="color_txt_select">#ec2829</color>
+    <color name="text1">#da340f</color>
+    <color name="text2">#a39b9b</color>
+    <color name="system_default_color">#8a000000</color>
+    <!--简洁版投注页面文字颜色-->
+    <color name="black_text_color">#333333</color>
+    <color name="black_text_color_light">#6e6e6e</color>
+    <!--顶部文字背景颜色-->
+    <color name="top_text_background_color">#cac9c9</color>
+    <color name="simple_color_child_bg">#cac9c9</color>
+    <color name="simple_color_group_bg">#f4f4f4</color>
+    <color name="simple_color_clear">#088b27</color>
+    <color name="simple_color_clear_press">#035115</color>
+    <color name="simple_color_red_press">#9c0818</color>
+    <color name="transparent">#00000000</color>
+    <color name="red_2">#400704</color>
+    <color name="red_3">#940809</color>
+    <color name="yellow">#f8d147</color>
+    <color name="color1">#ff6565</color>
+    <color name="color2">#ff4747</color>
+    <color name="color3">#ff0000</color>
+    <color name="color4">#c60101</color>
+    <!--indicator-->
+    <color name="color_tab_select">#ff0000</color>
+    <color name="color_tab_normal">#888888</color>
+    <!-- -->
+    <color name="blue">#7D7DFF</color>
+    <color name="color_cutting_line">#EAEAEA</color>
+    <color name="chat_half_transparent">#90000000</color>
+    <color name="chat_transparent">#91000000</color>
+    <color name="chat_dark_transparent">#c7000000</color>
+    <color name="dark_transparent">#f0000000</color>
+    <!--彩球上的文字-->
+    <color name="color_ball">#7a7a7a</color>
+    <!--投注提示文字-->
+    <color name="color_touzhu_hint">#cecece</color>
+    <color name="color_touzhu_time">#ffffff</color>
+    <!--分割线-->
+    <color name="color_cutoff_line">#99FFFFFF</color>
+    <!--list分割线-->
+    <color name="color_txt_black">#ff000000</color>
+    <color name="color_txt_white">#ffffff</color>
+    <color name="color_layout_bg">#f0f0f0</color>
+    <color name="color_title_bg">#f2f2f9</color>
+    <color name="color_alpha5_white">#7cffffff</color>
+    <color name="color_alpha4_black">#64000000</color>
+    <color name="color_alpha6_black">#99000000</color>
+    <color name="color_alpha8_black">#cc000000</color>
+    <!--普通字体颜色-->
+    <color name="color_txt">#000000</color>
+    <color name="color_gray_9c">#9c9c9c</color>
+    <color name="color_red_bg">#ec2829</color>
+    <color name="color_gray_53">#535353</color>
+    <color name="chat_ball_bg">#8DF0E4E4</color>
+    <color name="chat_simple_color_child_bg">#8DF8F3F3</color>
+    <!--投注区域选中item时，背景颜色-->
+    <color name="color_touzhu_choose_bg">#cccccc</color>
+    <color name="txt_color_mining_title">#6c3621</color>
+    <color name="light_black">#555555</color>
+
+    <!--首页新版UI字体颜色-->
+    <color name="txt_color_blake">#4D4D4D</color>
+    <color name="sign_bg_color_white_30">#4DFFFFFF</color>
+    <color name="sign_bg_color_black_30">#4D000000</color>
+</resources>

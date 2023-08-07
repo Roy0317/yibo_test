@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/shape_dialog_bg"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@mipmap/icon_hb_top">
+
+        <com.example.anuo.immodule.view.CircleImageView
+            android:id="@+id/iv_hb_user_img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_header" />
+
+        <ImageView
+            android:id="@+id/iv_hb_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/dp_10"
+            android:src="@mipmap/icon_close_red" />
+
+        <TextView
+            android:id="@+id/tv_hb_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_hb_user_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="test"
+            android:textColor="#bd2513"
+            android:textSize="@dimen/sp_16" />
+
+        <TextView
+            android:id="@+id/tv_hb_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_hb_user_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="35dp"
+            android:layout_marginRight="35dp"
+            android:text="恭喜发财"
+            android:textColor="#bd2513"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_hb_charge"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_hb_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            android:gravity="center_horizontal"
+            android:text="已存入零钱"
+            android:textColor="#f89c1b"
+            android:textSize="@dimen/sp_14" />
+
+        <TextView
+            android:id="@+id/tv_hb_detail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="5dp"
+            android:text=""
+            android:textColor="#b6b6b6" />
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcy_hb_result"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="#cb3e2d"
+        android:scrollbars="none" />
+</LinearLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--SwipeRefreshLayoutExtend-->
+    <color name="color1">#ff6565</color>
+    <color name="color2">#ff4747</color>
+    <color name="color3">#ff0000</color>
+    <color name="color4">#c60101</color>
+
+    <!--indicator-->
+    <color name="color_tab_select">#ff0000</color>
+    <color name="color_tab_normal">#888888</color>
+
+    <color name="color_line">#80bfbfbf</color>
+
+</resources>

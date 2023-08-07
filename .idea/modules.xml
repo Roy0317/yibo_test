@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Documents.iml" filepath="$PROJECT_DIR$/.idea/modules/Documents.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Documents.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Documents.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Documents.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Documents.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Documents.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Documents.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Documents.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Documents.app.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chatModule/Documents.chatModule.iml" filepath="$PROJECT_DIR$/.idea/modules/chatModule/Documents.chatModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chatModule/Documents.chatModule.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/chatModule/Documents.chatModule.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chatModule/Documents.chatModule.main.iml" filepath="$PROJECT_DIR$/.idea/modules/chatModule/Documents.chatModule.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/chatModule/Documents.chatModule.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/chatModule/Documents.chatModule.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/crazylibrary/Documents.crazylibrary.iml" filepath="$PROJECT_DIR$/.idea/modules/crazylibrary/Documents.crazylibrary.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/crazylibrary/Documents.crazylibrary.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/crazylibrary/Documents.crazylibrary.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/crazylibrary/Documents.crazylibrary.main.iml" filepath="$PROJECT_DIR$/.idea/modules/crazylibrary/Documents.crazylibrary.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/crazylibrary/Documents.crazylibrary.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/crazylibrary/Documents.crazylibrary.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libBase/Documents.libBase.iml" filepath="$PROJECT_DIR$/.idea/modules/libBase/Documents.libBase.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libBase/Documents.libBase.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/libBase/Documents.libBase.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libBase/Documents.libBase.main.iml" filepath="$PROJECT_DIR$/.idea/modules/libBase/Documents.libBase.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/libBase/Documents.libBase.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/libBase/Documents.libBase.unitTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/Documents.library.iml" filepath="$PROJECT_DIR$/.idea/modules/library/Documents.library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/Documents.library.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library/Documents.library.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/Documents.library.main.iml" filepath="$PROJECT_DIR$/.idea/modules/library/Documents.library.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/library/Documents.library.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/library/Documents.library.unitTest.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:id="@+id/ll_bfc_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="invisible"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_bfc_current_lottery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:background="@drawable/shape_chat_bet_title_left"
+                android:gravity="center"
+                android:minWidth="60dp"
+                android:padding="3dp"
+                android:text="当前彩种"
+                android:textColor="@color/orange"
+                android:textSize="@dimen/chat_txt_navigate" />
+
+            <TextView
+                android:id="@+id/tv_bfc_choose_lottery"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/shape_chat_bet_title_right"
+                android:gravity="center"
+                android:padding="3dp"
+                android:text="切换彩种"
+                android:enabled="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chat_txt_navigate" />
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/fl_bfc_container"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/ll_bfc_title"
+            android:background="@color/chat_half_transparent" />
+    </RelativeLayout>
+
+
+</LinearLayout>

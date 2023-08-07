@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/item"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/transparent"
+    android:orientation="vertical">
+
+    <!--<com.yibo.yiboapp.ui.TouzhuFuncView-->
+    <!--android:id="@+id/weishu_view"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:layout_marginRight="10dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:layout_weight="1.0"-->
+    <!--android:gravity="center_vertical|left"-->
+    <!--android:orientation="horizontal"-->
+    <!--app:view_category="2"-->
+    <!--app:view_clickable="true"-->
+    <!--app:view_select_drawable="@drawable/light_gred_rect_press"-->
+    <!--app:view_size="@dimen/weishu_ballon_size"-->
+    <!--app:view_string="@string/weishu_string"-->
+    <!--app:view_textcolor_normal="@color/lightgrey"-->
+    <!--app:view_textcolor_select="@color/colorWhite"-->
+    <!--app:view_unselect_drawable="@drawable/light_gred_rect">-->
+
+    <!--</com.yibo.yiboapp.ui.TouzhuFuncView>-->
+    <com.yibo.yiboapp.ui.TouzhuSimpleFuncView
+        android:id="@+id/weishu_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center|start"
+        android:orientation="horizontal"
+        android:paddingStart="10dp"
+        app:view_category="2"
+        app:view_clickable="true"
+        app:view_select_drawable="@drawable/light_gred_rect_press_simple_chat"
+        app:view_size="@dimen/funcview_ballon_size_simple"
+        app:view_string="@string/weishu_string"
+        app:view_textcolor_normal="@color/black_text_color"
+        app:view_textcolor_select="@color/colorWhite"
+        app:view_unselect_drawable="@drawable/light_gred_rect_simple_chat" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:background="#2AFFFFFF"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dp">
+
+        <TextView
+            android:id="@+id/play_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="3dp"
+            android:paddingEnd="5dp"
+            android:paddingStart="5dp"
+            android:paddingTop="3dp"
+            android:text="规则"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            android:textStyle="bold" />
+
+        <com.yibo.yiboapp.ui.TouzhuSimpleFuncView
+            android:id="@+id/func_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_weight="1.0"
+            android:gravity="center|end"
+            android:orientation="horizontal"
+            app:view_category="1"
+            app:view_clickable="true"
+            app:view_select_drawable="@drawable/light_gred_rect_press_simple_chat"
+            app:view_size="@dimen/funcview_ballon_size_simple"
+            app:view_string="@string/func_string"
+            app:view_textcolor_normal="@color/black_text_color"
+            app:view_textcolor_select="@color/colorWhite"
+            app:view_unselect_drawable="@drawable/light_gred_rect_simple_chat">
+
+        </com.yibo.yiboapp.ui.TouzhuSimpleFuncView>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/ball_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/qihao"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1.0"
+        android:horizontalSpacing="0dp"
+        android:numColumns="7"
+        android:paddingEnd="10dp"
+        android:paddingLeft="10dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:verticalSpacing="0dp" />
+
+
+</LinearLayout>

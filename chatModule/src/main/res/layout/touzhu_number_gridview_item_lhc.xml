@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/ball"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:background="@drawable/bet_lhc_red"
+            android:gravity="center"
+            android:textColor="@color/color_txt_black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="10" />
+
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="3dp"
+            android:textColor="@color/color_txt_black"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            tools:text="鼠" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtSymbol"
+            android:layout_width="15dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="+"
+            android:textColor="@color/color_txt_black"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</RelativeLayout>

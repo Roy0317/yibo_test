@@ -1,0 +1,457 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- new version login view -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    tools:context=".activity.RegisterActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <!-- 个人信息 -->
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:id="@+id/infos"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:paddingTop="20dip">
+
+                <!-- 用户帐户 -->
+                <LinearLayout
+                    android:id="@+id/account_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:drawableRight="@drawable/start_icon"
+                            android:gravity="right"
+                            android:text="@string/user_account"
+                            android:textColor="@color/grey"/>
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/account"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:drawablePadding="0dip"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="0dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="10dip"
+                            android:textColor="#3E3D3D"
+                            android:hint="@string/input_username"
+                            android:textColorHint="@color/input_text_hint"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0"/>
+
+                </LinearLayout>
+
+                <!-- 登录密码 -->
+                <LinearLayout
+                    android:id="@+id/login_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:drawableRight="@drawable/start_icon"
+                            android:gravity="right"
+                            android:text="@string/login_pwd"
+                            android:textColor="@color/grey"/>
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/password"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:drawablePadding="0dip"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="0dip"
+                            android:hint="@string/input_pwd"
+                            android:paddingRight="10dip"
+                            android:paddingTop="10dip"
+                            android:inputType="textPassword"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0"/>
+
+                </LinearLayout>
+
+                <!-- 确认密码 -->
+                <LinearLayout
+                    android:id="@+id/cofirm_login_pwd"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:drawableRight="@drawable/start_icon"
+                            android:gravity="right"
+                            android:text="@string/confirm_login_pwd"
+                            android:textColor="@color/grey"/>
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/confirm_password"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:drawablePadding="0dip"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="0dip"
+                            android:paddingRight="10dip"
+                            android:inputType="textPassword"
+                            android:hint="@string/input_pwd_again"
+                            android:paddingTop="10dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint"
+                            android:textSize="14sp"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0"/>
+
+                </LinearLayout>
+
+                <!--&lt;!&ndash; 真实姓名 &ndash;&gt;-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/realname_layout"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="@dimen/register_item_height"-->
+                        <!--android:layout_marginLeft="0dip"-->
+                        <!--android:layout_marginRight="0dip"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="3dip"-->
+                            <!--android:drawablePadding="2dp"-->
+                            <!--android:gravity="right"-->
+                            <!--android:text="@string/realname_str"-->
+                            <!--android:textColor="@color/grey"/>-->
+
+                        <!--<com.yibo.yiboapp.ui.XEditText-->
+                            <!--android:id="@+id/realname"-->
+                            <!--android:layout_width="fill_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="10dip"-->
+                            <!--android:layout_marginRight="10dip"-->
+                            <!--android:layout_weight="1.0"-->
+                            <!--android:background="@color/colorWhite"-->
+                            <!--android:drawablePadding="0dip"-->
+                            <!--android:paddingBottom="10dip"-->
+                            <!--android:paddingLeft="0dip"-->
+                            <!--android:paddingRight="10dip"-->
+                            <!--android:paddingTop="10dip"-->
+                            <!--android:hint="@string/input_realname"-->
+                            <!--android:textColor="#3E3D3D"-->
+                            <!--android:textColorHint="@color/input_text_hint"-->
+                            <!--android:textSize="14sp"/>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="0.3dp"-->
+                        <!--android:background="#F0F0F0"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash; QQ &ndash;&gt;-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/qq_layout"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="@dimen/register_item_height"-->
+                        <!--android:layout_marginLeft="0dip"-->
+                        <!--android:layout_marginRight="0dip"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="3dip"-->
+                            <!--android:drawablePadding="2dp"-->
+                            <!--android:gravity="right"-->
+                            <!--android:text="@string/qq_str"-->
+                            <!--android:textColor="@color/grey"/>-->
+
+                        <!--<com.yibo.yiboapp.ui.XEditText-->
+                            <!--android:id="@+id/qq"-->
+                            <!--android:layout_width="fill_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="10dip"-->
+                            <!--android:layout_marginRight="10dip"-->
+                            <!--android:layout_weight="1.0"-->
+                            <!--android:background="@color/colorWhite"-->
+                            <!--android:drawablePadding="0dip"-->
+                            <!--android:paddingBottom="10dip"-->
+                            <!--android:paddingLeft="0dip"-->
+                            <!--android:paddingRight="10dip"-->
+                            <!--android:paddingTop="10dip"-->
+                            <!--android:hint="@string/input_qq"-->
+                            <!--android:textColor="#3E3D3D"-->
+                            <!--android:textColorHint="@color/input_text_hint"-->
+                            <!--android:textSize="14sp"/>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="0.3dp"-->
+                        <!--android:background="#F0F0F0"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!--&lt;!&ndash; 电话号码 &ndash;&gt;-->
+                <!--<LinearLayout-->
+                    <!--android:id="@+id/phone_layout"-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:visibility="gone"-->
+                    <!--android:orientation="vertical">-->
+
+                    <!--<LinearLayout-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="@dimen/register_item_height"-->
+                        <!--android:layout_marginLeft="0dip"-->
+                        <!--android:layout_marginRight="0dip"-->
+                        <!--android:gravity="center_vertical"-->
+                        <!--android:orientation="horizontal">-->
+
+                        <!--<TextView-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="3dip"-->
+                            <!--android:drawablePadding="2dp"-->
+                            <!--android:gravity="right"-->
+                            <!--android:text="@string/phone_str"-->
+                            <!--android:textColor="@color/grey"/>-->
+
+                        <!--<com.yibo.yiboapp.ui.XEditText-->
+                            <!--android:id="@+id/phone"-->
+                            <!--android:layout_width="fill_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_marginLeft="10dip"-->
+                            <!--android:layout_marginRight="10dip"-->
+                            <!--android:layout_weight="1.0"-->
+                            <!--android:background="@color/colorWhite"-->
+                            <!--android:drawablePadding="0dip"-->
+                            <!--android:paddingBottom="10dip"-->
+                            <!--android:paddingLeft="0dip"-->
+                            <!--android:paddingRight="10dip"-->
+                            <!--android:paddingTop="10dip"-->
+                            <!--android:hint="@string/input_phone"-->
+                            <!--android:textColor="#3E3D3D"-->
+                            <!--android:textColorHint="@color/input_text_hint"-->
+                            <!--android:textSize="14sp"/>-->
+                    <!--</LinearLayout>-->
+
+                    <!--<View-->
+                        <!--android:layout_width="fill_parent"-->
+                        <!--android:layout_height="0.3dp"-->
+                        <!--android:background="#F0F0F0"/>-->
+
+                <!--</LinearLayout>-->
+
+                <!-- 验证码 -->
+                <LinearLayout
+                    android:id="@+id/vertify_code_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:gravity="right"
+                            android:drawableRight="@drawable/start_icon"
+                            android:text="@string/vertify_code"
+                            android:textColor="@color/grey"/>
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/vertify_code"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:drawablePadding="0dip"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="0dip"
+                            android:paddingRight="10dip"
+                            android:hint="@string/input_vertify_code"
+                            android:paddingTop="10dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint"
+                            android:textSize="14sp" />
+
+                        <ImageView
+                            android:id="@+id/vertify_code_img"
+                            android:layout_width="60dp"
+                            android:layout_height="30dp"
+                            />
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/reg_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/register_intime"
+                android:textSize="14sp"
+                android:textColor="@color/colorWhite"
+                android:background="@drawable/charge_money_btn_selector"/>
+
+            <!-- 忘记密码 -->
+            <RelativeLayout
+                android:id="@+id/act_bottom_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dip"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="20dip"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/serve_online"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/online_service"
+                    android:clickable="true"
+                    android:paddingTop="5dip"
+                    android:paddingBottom="5dip"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"/>
+
+                <TextView
+                    android:id="@+id/account_exist_login"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="@string/acocunt_login_direct"
+                    android:clickable="true"
+                    android:paddingTop="5dip"
+                    android:paddingBottom="5dip"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

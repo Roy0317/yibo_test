@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="1dp">
+        <TextView
+            android:id="@+id/textLotteryType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="真人"
+            android:textSize="17sp"
+            android:textColor="#3D4145"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/textBetAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="下注: 123456789.123456元"
+            android:textSize="15sp"
+            android:textColor="#5F6461"/>
+
+        <TextView
+            android:id="@+id/textWinAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="中奖: 123456789.123456元"
+            android:textSize="15sp"
+            android:textColor="#5F6461"/>
+
+        <TextView
+            android:id="@+id/textBalanceAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="盈亏: 123456789.123456元"
+            android:textSize="15sp"
+            android:textColor="#5F6461"/>
+    </LinearLayout>
+</RelativeLayout>

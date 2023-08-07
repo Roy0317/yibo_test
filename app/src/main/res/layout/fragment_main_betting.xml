@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_ordinary"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/number_list"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <FrameLayout
+                android:id="@+id/ll_left"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_lottery_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableRight="@drawable/icon_arrow_down_small"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/chat_txt_xin_choose_num"
+                    tools:text="大玩法-小玩法" />
+
+                <TextView
+                    android:id="@+id/last_qihao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/chat_txt_xin_choose_num" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_toRightOf="@id/ll_left">
+                <GridView
+                    android:id="@+id/numbers"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_toRightOf="@id/ll_left"
+                    android:scrollbars="none"
+                    android:stretchMode="columnWidth"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/empty_open_numer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toRightOf="@id/ll_left"
+                android:layout_weight="1.0"
+                android:gravity="center"
+                android:text="暂无开奖结果"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="0.5dp"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:background="@color/chat_dark_transparent" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/qihao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chat_txt_xin_choose_num"
+                tools:text="第0132期" />
+
+            <TextView
+                android:id="@+id/deadTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:gravity="center"
+                android:text="00:00:00"
+                android:textColor="@color/color_touzhu_time"
+                android:textSize="@dimen/chat_txt_xin_choose_num" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/chat_dark_transparent" />
+
+    <LinearLayout
+        android:id="@+id/ll_show_hide_open_result"
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_margin="3dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center|left"
+            android:orientation="horizontal"
+            android:paddingLeft="2dp">
+
+            <TextView
+                android:id="@+id/accountBalance"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:ellipsize="middle"
+                android:gravity="center_vertical"
+                android:singleLine="true"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chat_txt_touzhu_other"
+                tools:text="余额：1000d元" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/llMachineChoose"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right|center_vertical"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/icon_jqr" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="机器选号"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chat_txt_touzhu_other" />
+
+        </LinearLayout>
+
+        <!--一般快捷投注的切换-->
+        <LinearLayout
+            android:id="@+id/modeSwitch"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_gravity="right"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="10dp"
+            android:visibility="gone">
+
+            <FrameLayout
+                android:id="@+id/flFastOrCold"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/imageFastOrCold"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/bet_circle_choose" />
+
+                <TextView
+                    android:id="@+id/fastOrCold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="17dp"
+                    android:text="快捷"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/chat_txt_touzhu_other" />
+            </FrameLayout>
+
+
+            <FrameLayout
+                android:id="@+id/flNormalOrOut"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp">
+
+                <ImageView
+                    android:id="@+id/imageNormalOrOut"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_gravity="center_vertical"
+                    android:src="@drawable/bet_circle_choose_normal" />
+
+                <TextView
+                    android:id="@+id/normalOrOut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="17dp"
+                    android:text="一般"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/chat_txt_touzhu_other" />
+            </FrameLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <FrameLayout
+        android:id="@+id/child_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:background="@color/chat_transparent"
+        />
+
+    <!--底部投注，清除等功能菜单-->
+    <LinearLayout
+        android:id="@+id/bottom_func"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="visible">
+        <!-- 金额，拖动条等-->
+        <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:orientation="horizontal">-->
+
+        <!--<FrameLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_margin="3dp"-->
+        <!--android:layout_weight="3.0">-->
+
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/history_record"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="gone">-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="15dp"-->
+        <!--android:layout_height="15dp"-->
+        <!--android:src="@drawable/bet_records" />-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_marginLeft="4dp"-->
+        <!--android:text="下注记录"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="@dimen/txt_touzhu_other" />-->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/money_layout"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:gravity="center_vertical"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="visible">-->
+
+        <!--<TextView-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:gravity="center"-->
+        <!--android:text="金额:"-->
+        <!--android:textColor="@color/white"-->
+        <!--android:textSize="10sp" />-->
+
+        <!--<com.yibo.yiboapp.view.LimitEditText-->
+        <!--android:id="@+id/money_input"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:layout_weight="1.0"-->
+        <!--android:background="@drawable/grey_corner_btn_bg"-->
+        <!--android:gravity="center"-->
+        <!--android:hint="输入金额"-->
+        <!--android:inputType="phone"-->
+        <!--android:maxLength="7"-->
+        <!--android:minWidth="60dp"-->
+        <!--android:textColor="@color/tv_gray"-->
+        <!--android:textColorHint="@color/tv_gray"-->
+        <!--android:textSize="10sp" />-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/txtFastAmount"-->
+        <!--android:layout_width="20dp"-->
+        <!--android:layout_height="20dp"-->
+        <!--android:layout_marginLeft="5dp"-->
+        <!--android:background="@drawable/bet_fast_amount_bg"-->
+        <!--android:gravity="center"-->
+        <!--android:textColor="@color/color_txt_black"-->
+        <!--android:textSize="8sp"-->
+        <!--tools:text="快捷" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--</FrameLayout>-->
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/record_bar"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_vertical"-->
+        <!--android:layout_margin="3dp"-->
+        <!--android:layout_weight="2.5">-->
+
+        <!--<com.yibo.yiboapp.view.CustomTouzhuSeekBar-->
+        <!--android:id="@+id/custom_seekbar"-->
+        <!--android:layout_width="0dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:layout_weight="1.0"-->
+        <!--android:visibility="visible" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--</LinearLayout>-->
+        <!--底部投注及金额-->
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="3dp">
+
+            <Button
+                android:id="@+id/clear_jixuan"
+                android:layout_width="45dp"
+                android:layout_height="25dp"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/shape_gray_9c_bg3"
+                android:text="清除"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chat_txt_touzhu_other" />
+
+            <TextView
+                android:id="@+id/touzhu_money_txt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:text="已选0注"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chat_txt_touzhu_other" />
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="55dp"
+                android:layout_height="25dp"
+                android:layout_gravity="right|center_vertical"
+                android:background="@drawable/shape_red_bg3"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="@dimen/chat_txt_touzhu_other" />
+        </FrameLayout>
+
+    </LinearLayout>
+</LinearLayout>

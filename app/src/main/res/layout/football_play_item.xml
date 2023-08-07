@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/lightgrey"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/preference_single_item_normal"
+        android:layout_height="wrap_content">
+
+        <!--时间及是否滚球显示-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            >
+
+            <TextView
+                android:id="@+id/current_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:gravity="center_horizontal"
+                android:text="10:30"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/is_gunqiu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:text="(滚球)"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/scores"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:layout_marginLeft="10dp"
+                android:gravity="center_horizontal"
+                android:text="0-0"
+                android:visibility="gone"
+                android:textColor="@color/colorPrimary"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+        <!--球队名称-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="5dp"
+            >
+
+            <TextView
+                android:id="@+id/main_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:lines="1"
+                android:gravity="center_horizontal"
+                android:text="圣塔菲"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VS"
+                android:textSize="14sp"
+                />
+
+            <TextView
+                android:id="@+id/guest_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:lines="1"
+                android:gravity="center_horizontal"
+                android:text="拉伊奎达德"
+                android:textSize="14sp"
+                />
+
+        </LinearLayout>
+
+        <com.yibo.yiboapp.ui.SportTableContainer
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tables"
+            app:row_height="@dimen/table_row_height"
+            android:layout_weight="1.0"
+            android:layout_marginTop="10dp"
+            app:textcolor_normal="@color/gray"
+            app:textcolor_select="@color/colorWhite"
+            app:text_size="@dimen/table_row_text_size"
+            >
+        </com.yibo.yiboapp.ui.SportTableContainer>
+
+
+        <!--赛事结果-->
+        <GridView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:numColumns="5"
+            android:visibility="visible"
+            android:scrollbars="none"
+            android:layout_marginBottom="10dp"
+            android:stretchMode="columnWidth">
+        </GridView>
+
+    </LinearLayout>
+
+</LinearLayout>

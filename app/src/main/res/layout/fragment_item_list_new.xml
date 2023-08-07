@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginBottom="60dp"
+    android:orientation="vertical">
+
+    <!--频彩切换-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp"
+        android:paddingTop="5dp">
+
+        <TextView
+            android:id="@+id/all_lot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/all_lot_icon"
+            android:gravity="center"
+            android:text="全部彩种" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/driver_line_color" />
+
+        <TextView
+            android:id="@+id/high_lot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/high_lot_icon"
+            android:gravity="center"
+            android:text="高频彩" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@color/driver_line_color" />
+
+        <TextView
+            android:id="@+id/low_lot"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1.0"
+            android:background="@color/white"
+            android:clickable="true"
+            android:drawablePadding="5dp"
+            android:drawableTop="@mipmap/low_lot_icon"
+            android:gravity="center"
+            android:text="低频彩" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:orientation="horizontal">
+
+        <View
+            android:id="@+id/left_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@color/color_red" />
+
+        <View
+            android:id="@+id/middle_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@color/color_red"
+            android:visibility="invisible" />
+
+        <View
+            android:id="@+id/right_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@color/color_red"
+            android:visibility="invisible" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/xlistview_without_animation"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/empty"
+        layout="@layout/listview_empty_view"
+        android:visibility="gone" />
+
+
+</LinearLayout>

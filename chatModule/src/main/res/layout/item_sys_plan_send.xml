@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="5dp">
+
+    <com.example.anuo.immodule.view.CircleImageView
+        android:id="@+id/chat_item_header"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:scaleType="centerInside"
+        android:src="@mipmap/icon_sys" />
+
+    <com.example.anuo.immodule.view.CircleImageView
+        android:id="@+id/chat_item_admin"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="@dimen/dp_15"
+        android:scaleType="centerInside"
+        android:src="@drawable/icon_admin" />
+
+    <ImageView
+        android:id="@+id/iv_plan_title"
+        android:layout_width="180dp"
+        android:layout_height="30dp"
+        android:layout_above="@id/rl_plan_content"
+        android:layout_marginBottom="-5dp"
+        android:layout_marginRight="20dp"
+        android:layout_toLeftOf="@id/chat_item_header"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/icon_plan_title"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/ll_msg_title"
+        layout="@layout/msg_title_send" />
+
+    <RelativeLayout
+        android:id="@+id/rl_plan_content"
+        android:layout_width="@dimen/max_bet_slip_width"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_msg_title"
+        android:layout_marginTop="5dp"
+        android:layout_toLeftOf="@id/chat_item_header"
+        android:background="@drawable/shape_plan_bg">
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_plan_content"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:minHeight="100dp"-->
+        <!--android:padding="@dimen/dp_10"-->
+        <!--android:text="【系统推荐-精准计划&#45;&#45;分分快三】-->
+        <!--================-->
+        <!--77期 两面和值 小中【216】-->
+        <!--78期 两面和值 大中【464】-->
+        <!--79期 两面和值 小挂【626】-->
+        <!--80期 两面和值 小挂【655】-->
+        <!--81期 两面和值 大挂【511】-->
+        <!--82期 两面和值 单-->
+        <!--===============-->
+        <!--连开四期大单、就倍投小双￥以：1/3/9/27/81 倍投注中奖后恢复到 1 倍起步投注备足六期资金每天倍投稳赚银行卡转账入款送 1%返利邀请好友有神秘大礼包"-->
+        <!--android:textColor="@color/plan_col"-->
+        <!--android:textSize="@dimen/sp_12" />-->
+        <TextView
+            android:id="@+id/tv_plan_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/dp_10"
+            android:text="彩种名字"
+            android:textColor="@color/plan_col"
+            android:textSize="@dimen/sp_12" />
+
+        <com.simon.view.webview.BridgeWebView
+            android:id="@+id/web_plan_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_plan_name"
+            android:layout_margin="@dimen/dp_10" />
+
+        <TextView
+            android:id="@+id/tv_plan_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_plan_name"
+            android:textColor="@color/plan_col"
+            android:layout_margin="@dimen/dp_10" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/web_plan_content"
+            android:background="@drawable/shape_plan_btn_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="一键跟投"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_14"
+            android:visibility="gone" />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/chat_item_fail"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/rl_plan_content"
+        android:focusable="false"
+        android:src="@drawable/msg_state_fail_resend"
+        android:visibility="invisible" />
+
+    <ProgressBar
+        android:id="@+id/chat_item_progress"
+        style="@android:style/Widget.ProgressBar.Small.Inverse"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/rl_plan_content"
+        android:visibility="invisible" />
+</RelativeLayout>

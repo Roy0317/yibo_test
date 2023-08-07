@@ -1,0 +1,10 @@
+
+    引入module 需注意以下几点：
+
+    1.如不需使用topView,在BaseActivity中 添加此方法showTopView(false)，需要使用者根据APP具体需要添加视图和功能
+
+    2.topView的高度需要在dimen中设置默认高度
+
+    3.如需使用页面加载的dialog 和 全页面加载需要添加视图， 加载失败空视图也需添加
+
+    4.如需使用rxpermissions 需要在 ProcessName类中添加主进程名字

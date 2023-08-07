@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: :captcha-release_v3.2.0:@aar">
+    <CLASSES>
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dcc69575bbe654910acddc78d36a8a3c/transformed/jetified-captcha-release_v3.2.0/AndroidManifest.xml" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/dcc69575bbe654910acddc78d36a8a3c/transformed/jetified-captcha-release_v3.2.0/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/dcc69575bbe654910acddc78d36a8a3c/transformed/jetified-captcha-release_v3.2.0/jars/classes.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

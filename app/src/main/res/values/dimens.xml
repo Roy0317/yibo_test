@@ -1,0 +1,85 @@
+<resources>
+    <dimen name="bg_radius">10dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="list_text_big_size">18dp</dimen>
+    <dimen name="list_text_size">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+    <dimen name="big_ballon_size">60dp</dimen>
+    <dimen name="ballon_size">30dp</dimen>
+    <dimen name="ballon_size_simple">10dp</dimen>
+    <dimen name="ballon_radius">20dp</dimen>
+    <dimen name="funcview_ballon_size">30dp</dimen>
+    <dimen name="funcview_ballon_size_simple">27dp</dimen>
+    <dimen name="peilv_ballon_size">30dp</dimen>
+    <dimen name="kaijian_ballon_size">25dp</dimen>
+    <dimen name="kaijian_ballon_radius">12.5dp</dimen>
+    <dimen name="funcview_ballon_radius">15dp</dimen>
+    <dimen name="order_ballon_size">40dp</dimen>
+    <dimen name="small_ballon_size">20dp</dimen>
+    <dimen name="weishu_ballon_size">30dp</dimen>
+    <dimen name="tiny_ballon_size">15dp</dimen>
+    <dimen name="big_ballon_radius">30dp</dimen>
+    <dimen name="small_ballon_radius">10dp</dimen>
+    <dimen name="order_ballon_radius">20dp</dimen>
+    <dimen name="register_item_height">50dp</dimen>
+    <dimen name="peilv_item_ball_size">15dp</dimen>
+    <dimen name="peilv_item_ball_radius">7.5dp</dimen>
+    <dimen name="bar_width_small">1dp</dimen>
+    <dimen name="rim_width_small">1dp</dimen>
+    <dimen name="wheel_progress_radius">50dp</dimen>
+    <dimen name="wheel_progress_radius_small">40dp</dimen>
+    <dimen name="play_method_text_size">12sp</dimen>
+    <dimen name="mistake_margin">-1dp</dimen>
+    <dimen name="ballon_margin_when_touzhu">4dp</dimen>
+    <dimen name="menu_tabbar_height">48dp</dimen>
+    <dimen name="cart_count_ballon_size">15dp</dimen>
+    <dimen name="cart_count_ballon_radius_size">7.5dp</dimen>
+    <dimen name="table_row_height">20dp</dimen>
+    <dimen name="table_row_text_size">12sp</dimen>
+    <dimen name="peilv_item_table_height">45dp</dimen>
+    <!--分割线默认宽度-->
+    <dimen name="linWeight">0.5dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <!--linearLayout高度-->
+    <dimen name="linearLayout_height">50dp</dimen>
+    <!--================================聊天室投注页字体大小================================-->
+    <!--导航栏主标题-->
+    <dimen name="chat_txt_navigate">12sp</dimen>
+    <!--导航栏右边提示文字-->
+    <dimen name="chat_txt_navigate_right">10sp</dimen>
+    <!--下拉框内容-->
+    <dimen name="chat_txt_dialog">9sp</dimen>
+    <!--开奖区域-->
+    <dimen name="chat_txt_lottery">9sp</dimen>
+    <!--侧边导航-->
+    <dimen name="chat_txt_sidedge_navigate">8sp</dimen>
+    <!--选号区域文字-->
+    <dimen name="chat_txt_guan_choose_num">8sp</dimen>
+    <!--彩票球上的数字-->
+    <dimen name="chat_txt_ball_num">9sp</dimen>
+    <!--信用选号区域文字-->
+    <dimen name="chat_txt_xin_choose_num">10sp</dimen>
+    <!--投注页其他文字大小-->
+    <dimen name="chat_txt_touzhu_other">10sp</dimen>
+    <!--投注提示文字大小-->
+    <dimen name="chat_txt_touzhu_hint">8sp</dimen>
+    <!--================================end================================-->
+    <dimen name="bg_radius_5">5dp</dimen>
+    <dimen name="default_bg_radius">3dp</dimen>
+    <dimen name="touzhu_radius_3">3dp</dimen>
+    <dimen name="renew_bank_entry_height">50dp</dimen>
+    <dimen name="renew_bank_star_width">36dp</dimen>
+    <dimen name="renew_bank_text_size">18sp</dimen>
+    <dimen name="account_entry_view_height">52dp</dimen>
+    <dimen name="account_entry_view_title_width">100dp</dimen>
+    <dimen name="account_entry_view_text_size">16sp</dimen>
+
+    <!--首页新版UI icon size-->
+    <dimen name="icon_35dp_size">35dp</dimen>
+    <dimen name="icon_13dp_size">13dp</dimen>
+    <dimen name="icon_25dp_size">25dp</dimen>
+    <dimen name="icon_20dp_size">20dp</dimen>
+
+    <dimen name="title_height">52dp</dimen>
+    <dimen name="withdraw_entry_height">44dp</dimen>
+</resources>

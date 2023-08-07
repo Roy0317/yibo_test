@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:id="@+id/item"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:background="@drawable/caipiao_item_bg">
+
+    <ImageView
+        android:id="@+id/header"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:clickable="true"
+        android:background="@drawable/default_lottery" />
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/header">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分分时时彩"
+            android:textSize="16sp"
+            />
+
+        <TextView
+            android:id="@+id/last_qihao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:text="第0期"
+            android:textColor="@color/grey"
+            android:layout_gravity="center_vertical"
+            />
+
+        <TextView
+            android:id="@+id/open_number_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5,4,3,1,2"
+            android:layout_below="@id/name"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorPrimary"
+            android:layout_gravity="center_vertical"
+            />
+
+        <GridView
+            android:id="@+id/numbers"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:numColumns="10"
+            android:visibility="gone"
+            android:layout_below="@id/name"
+            android:layout_marginTop="5dp"
+            android:scrollbars="none"
+            android:stretchMode="columnWidth"
+            android:layout_marginBottom="0dp"
+            android:horizontalSpacing="1dp"
+            android:verticalSpacing="1dp">
+        </GridView>
+
+
+        <TextView
+            android:id="@+id/dead_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0期投注还有 00:00:00"
+            android:layout_below="@id/numbers"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textSize="12sp"
+            android:lines="1"
+            android:layout_marginTop="5dp"
+            android:ellipsize="start"
+            android:textColor="@color/grey"
+            />
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

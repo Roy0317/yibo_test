@@ -1,0 +1,686 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#f2f2f2"
+    android:orientation="vertical"
+    tools:context=".mvvm.banking.PickMoneyNewActivity">
+    <include
+        android:id="@+id/title"
+        layout="@layout/simple_top_title" />
+
+    <ScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:scrollbars="none">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/linearWithdrawBG"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="4.16"
+                    android:gravity="center_vertical"
+                    android:background="@drawable/bg_withdraw">
+                    <com.facebook.drawee.view.SimpleDraweeView
+                        android:id="@+id/header"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_marginHorizontal="20dp"
+                        fresco:actualImageScaleType="fitCenter"
+                        fresco:placeholderImage="@drawable/member_headers"
+                        fresco:placeholderImageScaleType="fitCenter"
+                        fresco:roundAsCircle="true" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:id="@+id/textUserName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="****"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textBalance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="余额：0元"
+                            android:textColor="@color/white"
+                            android:textSize="15sp" />
+
+                        <TextView
+                            android:id="@+id/textCantWithdraw"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="4dp"
+                            android:text="投注量未达标，不能提款"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageMore"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:padding="8dp"
+                        android:src="@drawable/more"/>
+                </LinearLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="@color/white">
+                <LinearLayout
+                    android:id="@+id/linearAccountType"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/withdraw_entry_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="提款方式"
+                        android:textSize="13sp"
+                        android:textColor="#6F7179" />
+
+                    <TextView
+                        android:id="@+id/textAccountType"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/choose_withdraw_account"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:singleLine="true" />
+
+                    <ImageView
+                        android:layout_width="10dp"
+                        android:layout_height="20dp"
+                        android:layout_marginHorizontal="12dp"
+                        android:src="@drawable/icon_arrow_right" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey"/>
+
+                <LinearLayout
+                    android:id="@+id/linearAccount"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/withdraw_entry_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/tagAccount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="银行卡号"
+                        android:textSize="13sp"
+                        android:textColor="#6F7179" />
+
+                    <TextView
+                        android:id="@+id/textAccount"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey"/>
+
+                <LinearLayout
+                    android:id="@+id/linearBankAddress"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/withdraw_entry_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="支行地址"
+                        android:textSize="13sp"
+                        android:textColor="#6F7179" />
+
+                    <TextView
+                        android:id="@+id/textBankAddress"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey"/>
+
+                <LinearLayout
+                    android:id="@+id/linearName"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/withdraw_entry_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/tagName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="开户姓名"
+                        android:textSize="13sp"
+                        android:textColor="#6F7179" />
+
+                    <TextView
+                        android:id="@+id/textName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/black" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey"/>
+
+                <LinearLayout
+                    android:id="@+id/linearMoneyRange"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/withdraw_entry_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/tagMoneyRange"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="金额限制"
+                        android:textSize="13sp"
+                        android:textColor="#6F7179" />
+
+                    <TextView
+                        android:id="@+id/textMoneyRange"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey"/>
+
+                <LinearLayout
+                    android:id="@+id/linearMoney"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/withdraw_entry_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="提款金额"
+                        android:textSize="13sp"
+                        android:textColor="#6F7179" />
+
+                    <EditText
+                        android:id="@+id/editMoney"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:hint="请输入提款金额"
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:inputType="numberDecimal"
+                        android:singleLine="true"
+                        android:background="@color/transparent"/>
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textMoneyWarning"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="不允許小數"
+                    android:textSize="12sp"
+                    android:textColor="@color/red"
+                    android:layout_marginHorizontal="12dp"
+                    android:layout_marginBottom="4dp"
+                    android:visibility="gone"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey"/>
+
+                <LinearLayout
+                    android:id="@+id/linearRate"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/withdraw_entry_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:id="@+id/tagRate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="汇率"
+                        android:textSize="13sp"
+                        android:textColor="#6F7179" />
+
+                    <TextView
+                        android:id="@+id/textRate"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey"/>
+
+                <LinearLayout
+                    android:id="@+id/linearTokenNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/withdraw_entry_height"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="12dp"
+                        android:text="数量"
+                        android:textSize="13sp"
+                        android:textColor="#6F7179" />
+
+                    <TextView
+                        android:id="@+id/textTokenNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:textSize="14sp"
+                        android:textColor="@color/black"
+                        android:singleLine="true" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey"/>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <LinearLayout
+                        android:id="@+id/linearFee"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/withdraw_entry_height"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:text="手续费"
+                            android:textSize="13sp"
+                            android:textColor="#6F7179" />
+
+                        <TextView
+                            android:id="@+id/textFee"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="0"
+                            android:textSize="14sp"
+                            android:textColor="@color/red"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="44dp"
+                            android:text="元"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"/>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageInfoFee"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        app:layout_constraintTop_toTopOf="@id/linearFee"
+                        app:layout_constraintBottom_toBottomOf="@id/linearFee"
+                        app:layout_constraintRight_toRightOf="@id/linearFee"
+                        android:layout_marginRight="12dp"
+                        android:src="@drawable/icon_info" />
+
+                    <View
+                        android:id="@+id/view1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        app:layout_constraintTop_toBottomOf="@id/linearFee"
+                        android:layout_marginHorizontal="12dp"
+                        android:background="@color/lightgrey"/>
+
+                    <LinearLayout
+                        android:id="@+id/linearPassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/withdraw_entry_height"
+                        app:layout_constraintTop_toBottomOf="@id/view1"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="12dp"
+                            android:text="提款密码"
+                            android:textSize="13sp"
+                            android:textColor="#6F7179" />
+
+                        <EditText
+                            android:id="@+id/editPassword"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="12dp"
+                            android:hint="请输入提款密码"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:background="@color/transparent"
+                            android:singleLine="true"/>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        app:layout_constraintTop_toBottomOf="@id/linearPassword"
+                        android:layout_marginHorizontal="12dp"
+                        android:background="@color/lightgrey"/>
+
+                    <ImageView
+                        android:id="@+id/imageTriangle"
+                        android:layout_width="10dp"
+                        android:layout_height="10dp"
+                        app:layout_constraintLeft_toLeftOf="@id/imageInfoFee"
+                        app:layout_constraintRight_toRightOf="@id/imageInfoFee"
+                        app:layout_constraintTop_toBottomOf="@id/imageInfoFee"
+                        android:src="@drawable/triangle_up"
+                        android:visibility="gone"/>
+
+                    <TextView
+                        android:id="@+id/textInfoFee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintRight_toRightOf="@id/imageInfoFee"
+                        app:layout_constraintTop_toBottomOf="@id/imageInfoFee"
+                        android:layout_marginTop="8dp"
+                        android:padding="10dp"
+                        android:text="免费提款2次后，每次提款收取999999.9999元手续费"
+                        android:background="@drawable/bg_fee_info"
+                        android:visibility="gone"/>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:background="@color/white"
+                android:paddingVertical="8dp"
+                android:paddingHorizontal="12dp">
+                <TextView
+                    android:id="@+id/tagWithdrawNotice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    android:text="出款须知"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/textTransferDueTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/tagWithdrawNotice"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="(如未到账，请联系在线客服)"
+                    android:textSize="11sp"
+                    android:textColor="@color/black"/>
+
+                <View
+                    android:id="@+id/dividerWithdrawNotice"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    app:layout_constraintTop_toBottomOf="@id/tagWithdrawNotice"
+                    android:layout_marginTop="6dp"
+                    android:background="@color/lightgrey"/>
+
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="0.5dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="@id/dividerWithdrawNotice"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:layout_marginTop="8dp"
+                    android:background="@color/lightgrey"/>
+
+                <TextView
+                    android:id="@+id/tagWithdrawTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/dividerWithdrawNotice"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/divider1"
+                    android:layout_marginTop="12dp"
+                    android:text="今日剩余提款次数"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tagTransferTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/tagWithdrawTimes"
+                    app:layout_constraintLeft_toRightOf="@id/divider1"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="出款时间"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/textWithdrawTimes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/tagWithdrawTimes"
+                    app:layout_constraintRight_toRightOf="@id/tagWithdrawTimes"
+                    app:layout_constraintTop_toBottomOf="@id/tagWithdrawTimes"
+                    android:layout_marginTop="4dp"
+                    android:text="0次"
+                    android:textSize="13sp"
+                    android:textColor="@color/red"/>
+
+                <TextView
+                    android:id="@+id/textTransferTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/tagTransferTime"
+                    app:layout_constraintRight_toRightOf="@id/tagTransferTime"
+                    app:layout_constraintTop_toBottomOf="@id/tagTransferTime"
+                    android:layout_marginTop="4dp"
+                    android:text="0"
+                    android:textSize="13sp"
+                    android:textColor="@color/red"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <LinearLayout
+                android:id="@+id/linearWithdrawInfo"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/withdraw_entry_height"
+                android:layout_marginTop="8dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:background="@color/white">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginHorizontal="12dp"
+                    android:text="提款说明"
+                    android:textSize="13sp"
+                    android:textColor="@color/black" />
+
+                <ImageView
+                    android:id="@+id/imageInfoArrow"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:src="@drawable/icon_arrow_right" />
+            </LinearLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintWithdrawInfo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:background="@color/white"
+                android:visibility="">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey"/>
+
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="0.5dp"
+                    android:layout_height="0dp"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/viewDivider"
+                    android:layout_marginVertical="8dp"
+                    android:background="@color/lightgrey"/>
+
+                <TextView
+                    android:id="@+id/tagCurrentBetAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/divider2"
+                    android:layout_marginTop="12dp"
+                    android:text="当前打码量"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/tagNeedBetAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toTopOf="@id/tagCurrentBetAmount"
+                    app:layout_constraintLeft_toRightOf="@id/divider2"
+                    app:layout_constraintRight_toRightOf="parent"
+                    android:text="提款需达投注量"
+                    android:textSize="13sp"
+                    android:textColor="@color/black"/>
+
+                <TextView
+                    android:id="@+id/textCurrentBetMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/tagCurrentBetAmount"
+                    app:layout_constraintRight_toRightOf="@id/tagCurrentBetAmount"
+                    app:layout_constraintTop_toBottomOf="@id/tagCurrentBetAmount"
+                    android:layout_marginTop="4dp"
+                    android:text="0"
+                    android:textSize="13sp"
+                    android:textColor="@color/red"/>
+
+                <TextView
+                    android:id="@+id/textNeedBetMoney"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintLeft_toLeftOf="@id/tagNeedBetAmount"
+                    app:layout_constraintRight_toRightOf="@id/tagNeedBetAmount"
+                    app:layout_constraintTop_toBottomOf="@id/tagNeedBetAmount"
+                    android:layout_marginTop="4dp"
+                    android:text="0"
+                    android:textSize="13sp"
+                    android:textColor="@color/red"/>
+
+                <View
+                    android:id="@+id/viewDivider"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    app:layout_constraintTop_toBottomOf="@id/textCurrentBetMoney"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginHorizontal="12dp"
+                    android:background="@color/lightgrey" />
+
+                <TextView
+                    android:id="@+id/textWithdrawInfo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintTop_toBottomOf="@id/viewDivider"
+                    android:layout_margin="12dp"
+                    android:text="1. 提交提款申请短信验证，必须已绑定手机，提交申请同时系统发送短信验证码\n2. 用户需填写所收到的正确验证码"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"/>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/buttonConfirm"
+        android:layout_width="match_parent"
+        style="@style/btnConfirm"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginVertical="8dp"/>
+</LinearLayout>

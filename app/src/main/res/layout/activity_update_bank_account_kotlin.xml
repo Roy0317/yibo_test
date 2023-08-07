@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:orientation="vertical"
+    tools:context=".mvvm.banking.UpdateBankAccountActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/renew_bank_entry_height"
+        android:gravity="center"
+        android:text="@string/renew_bank_entry_hint"
+        android:textSize="@dimen/renew_bank_text_size"
+        android:background="#F5F5F5"
+        android:elevation="4dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/renew_bank_entry_height"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="@dimen/renew_bank_star_width"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:gravity="center_vertical|right"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:text="持卡人"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/editUserName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:hint="请输入持卡人姓名"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:background="@color/transparent"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_dark_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/renew_bank_entry_height"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="@dimen/renew_bank_star_width"
+            android:layout_height="match_parent"
+            android:text="*"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:gravity="center_vertical|right"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:text="所属银行"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/editBankName"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5.5"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:hint="请输入银行名称"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:background="@color/transparent"/>
+
+        <Spinner
+            android:id="@+id/spinnerBank"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.5"
+            android:dropDownWidth="wrap_content"
+            android:gravity="center"
+            android:spinnerMode="dialog"
+            android:entries="@array/bank_card" />
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_dark_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/renew_bank_entry_height"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="@dimen/renew_bank_star_width"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:gravity="center_vertical|right"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:text="省份"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/editProvince"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:hint="请输入省份"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_dark_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/renew_bank_entry_height"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="@dimen/renew_bank_star_width"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:gravity="center_vertical|right"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:text="城市"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/editCity"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:hint="请输入城市"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_dark_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/renew_bank_entry_height"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="@dimen/renew_bank_star_width"
+            android:layout_height="match_parent"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:gravity="center_vertical|right"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:text="开户网点"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/editNetSpot"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:hint="请输入开户网点"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_dark_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/renew_bank_entry_height"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="@dimen/renew_bank_star_width"
+            android:layout_height="match_parent"
+            android:text="*"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:gravity="center_vertical|right"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:text="银行卡号"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/editBankCard"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:hint="请输入银行卡号"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:background="@color/transparent"
+            android:enabled="false"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_dark_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/renew_bank_entry_height"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="@dimen/renew_bank_star_width"
+            android:layout_height="match_parent"
+            android:text="*"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:gravity="center_vertical|right"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:text="确认银行卡号"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/editBankCardCheck"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:hint="请确认银行卡号"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+
+    <include layout="@layout/view_divider_dark_horizontal" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/renew_bank_entry_height"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="@dimen/renew_bank_star_width"
+            android:layout_height="match_parent"
+            android:text="*"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:gravity="center_vertical|right"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3.5"
+            android:text="提款密码"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:textColor="@color/black"
+            android:gravity="center_vertical"/>
+
+        <EditText
+            android:id="@+id/editPassword"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="7"
+            android:gravity="center_vertical"
+            android:paddingLeft="4dp"
+            android:hint="请输入提款密码"
+            android:inputType="textPassword"
+            android:textSize="@dimen/renew_bank_text_size"
+            android:background="@color/transparent"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/buttonNext"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="32dp"
+        android:layout_marginRight="32dp"
+        android:layout_marginTop="40dp"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="@dimen/renew_bank_text_size"
+        android:background="@drawable/selector_btn_confirm_fillet"/>
+</LinearLayout>

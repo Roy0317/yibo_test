@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.yibo.yiboapp.activity.SettingUsualGameActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title"/>
+
+    <!--搜索栏-->
+    <LinearLayout
+        android:id="@+id/money_input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal">
+
+        <com.yibo.yiboapp.ui.XEditText
+            android:id="@+id/input_key"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginRight="-1dp"
+            android:layout_weight="1.0"
+            android:background="@drawable/peilv_money_input_bg"
+            android:clickable="true"
+            android:drawablePadding="0dip"
+            android:focusable="true"
+            android:hint="@string/input_game_keyword"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:longClickable="false"
+            android:maxLines="1"
+            android:paddingLeft="20dp"
+            android:singleLine="true"
+            android:textColorHint="@color/lightgrey"
+            android:textSize="12sp"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:background="@drawable/peilv_confirm_bg"
+            android:text="@string/search_btn_txt"
+            android:textColor="@color/color_red"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <include
+        layout="@layout/view_divider_dark_horizontal" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="推荐游戏:"
+        />
+
+    <GridView
+        android:id="@+id/recommand"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginBottom="5dp"
+        android:numColumns="4"
+        android:clickable="false"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="5dp"
+        android:verticalSpacing="5dp">
+    </GridView>
+
+    <include layout="@layout/view_divider_dark_horizontal" />
+
+    <com.yibo.yiboapp.ui.XListView
+        android:id="@+id/xlistview"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1.0"
+        android:background="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        android:descendantFocusability="beforeDescendants"
+        android:fadingEdge="none">
+
+    </com.yibo.yiboapp.ui.XListView>
+
+
+
+    <include
+        android:id="@+id/empty"
+        android:visibility="gone"
+        layout="@layout/listview_empty_view"/>
+
+
+
+
+</LinearLayout>

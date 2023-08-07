@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/item"
+    android:clickable="true"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/platform_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="平台类型: OG"
+        android:textSize="@dimen/list_text_size"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/winState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="赢：12元"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tz_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="投注金额：0元"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/platform_type"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0000-00-00 00:00:00"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_alignBottom="@id/tz_fee"
+        android:layout_marginTop="5dp"
+        />
+
+</RelativeLayout>

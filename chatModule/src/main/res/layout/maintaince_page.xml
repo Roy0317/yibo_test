@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:paddingBottom="20dp"
+        skin:enable="true">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/chat_top_title" />
+
+    <FrameLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:layout_weight="1.0">
+
+
+
+        <ImageView
+            android:id="@+id/cause_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/weihu"
+            />
+
+        <TextView
+            android:id="@+id/cause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="120dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="50dp"
+            android:textSize="14sp"
+            android:layout_centerInParent="true"
+            android:gravity="left"
+            android:text="网站正在维护中"
+            />
+
+    </FrameLayout>
+
+
+</RelativeLayout>

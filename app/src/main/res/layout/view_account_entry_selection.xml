@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+        <TextView
+            android:id="@+id/text_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/account_entry_view_height"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="開戶銀行"
+            android:textSize="@dimen/account_entry_view_text_size"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/text_star"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/text_content"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/account_entry_view_height"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:textSize="@dimen/account_entry_view_text_size"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="12dp"/>
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_arrow_down"
+            android:layout_marginRight="12dp"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f2f2f2" />
+
+    <LinearLayout
+        android:id="@+id/linear_other"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/text_other_title"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/account_entry_view_height"
+            android:layout_marginLeft="16dp"
+            android:gravity="center_vertical"
+            android:text="開戶銀行"
+            android:textSize="@dimen/account_entry_view_text_size"
+            android:textColor="@color/black"/>
+
+        <TextView
+            android:id="@+id/text_star_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="@color/red"
+            android:textSize="16sp"/>
+
+        <EditText
+            android:id="@+id/edit_other_content"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/account_entry_view_height"
+            android:background="@color/transparent"
+            android:textSize="@dimen/account_entry_view_text_size"
+            android:paddingLeft="12dp"
+            android:paddingRight="12dp"/>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_other"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#f2f2f2"
+        android:visibility="gone"/>
+</LinearLayout>

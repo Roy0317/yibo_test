@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical"
+    tools:context="com.yibo.yiboapp.SettingBankActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_weight="1.0"
+            android:orientation="vertical">
+
+            <!-- 个人信息 -->
+            <LinearLayout
+                android:id="@+id/infos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:orientation="vertical"
+                android:paddingTop="20dip">
+
+                <!-- 持卡人姓名 -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:drawableRight="@drawable/start_icon"
+                            android:gravity="right"
+                            android:text="持卡人姓名"
+                            android:textColor="@color/grey" />
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/user_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:drawablePadding="0dip"
+                            android:hint="请输入持卡人"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="0dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="10dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0" />
+
+                </LinearLayout>
+
+                <!-- 出款银行名称 -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:drawableRight="@drawable/start_icon"
+                            android:gravity="right"
+                            android:text="出款银行名称"
+                            android:textColor="@color/grey" />
+
+                        <LinearLayout
+                            android:layout_marginRight="10dip"
+                            android:gravity="center_vertical"
+                            android:background="@color/colorWhite"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                           >
+
+
+                            <com.yibo.yiboapp.ui.XEditText
+                                android:layout_marginLeft="10dip"
+                                android:layout_marginRight="10dip"
+                                android:id="@+id/bank_name"
+                                android:background="@null"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1.0"
+                                android:drawablePadding="0dip"
+                                android:hint="请输入银行名称"
+                                android:paddingBottom="10dip"
+                                android:paddingLeft="0dip"
+                                android:paddingTop="10dip"
+                                android:textColor="#3E3D3D"
+                                android:textColorHint="@color/input_text_hint"
+                                android:textSize="14sp" />
+
+                            <Spinner
+                                android:dropDownWidth="wrap_content"
+                                android:gravity="center"
+                                android:id="@+id/spinner"
+                                android:layout_width="45dp"
+                                android:spinnerMode="dialog"
+                                android:layout_height="match_parent"
+                                android:entries="@array/bank_card" />
+
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0" />
+
+                </LinearLayout>
+
+                <!-- 开户行网点 -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:gravity="right"
+                            android:text="开户行网点"
+                            android:textColor="@color/grey" />
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/bank_address"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:drawablePadding="0dip"
+                            android:hint="请输入开户网点"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="0dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="10dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0" />
+
+                </LinearLayout>
+
+                <!-- 出款银行帐号 -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:drawableRight="@drawable/start_icon"
+                            android:gravity="right"
+                            android:text="出款银行帐号"
+                            android:textColor="@color/grey" />
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/cardno"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:drawablePadding="0dip"
+                            android:hint="请输入帐号"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="0dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="10dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0" />
+
+                </LinearLayout>
+
+                <!-- 出款银行帐号 -->
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:drawableRight="@drawable/start_icon"
+                            android:gravity="right"
+                            android:text="确认银行帐号"
+                            android:textColor="@color/grey" />
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/cardno1"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:drawablePadding="0dip"
+                            android:hint="请再次帐号"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="0dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="10dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0" />
+
+                </LinearLayout>
+
+                <!-- 提款密码 -->
+                <LinearLayout
+                    android:id="@+id/pick_pwd_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="@dimen/register_item_height"
+                        android:layout_marginLeft="0dip"
+                        android:layout_marginRight="0dip"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="3dip"
+                            android:drawablePadding="2dp"
+                            android:drawableRight="@drawable/start_icon"
+                            android:gravity="right"
+                            android:text="提款密码"
+                            android:textColor="@color/grey" />
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/pick_pwd"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dip"
+                            android:layout_marginRight="10dip"
+                            android:layout_weight="1.0"
+                            android:background="@color/colorWhite"
+                            android:drawablePadding="0dip"
+                            android:hint="请输入密码"
+                            android:inputType="textPassword"
+                            android:paddingBottom="10dip"
+                            android:paddingLeft="0dip"
+                            android:paddingRight="10dip"
+                            android:paddingTop="10dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint"
+                            android:textSize="14sp" />
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="0.3dp"
+                        android:background="#F0F0F0" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/setting_btn"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/exit_btn_bg"
+                android:text="@string/str_setting"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:visibility="gone"
+                android:textSize="18sp"
+                android:textColor="@color/red"
+                android:layout_marginTop="50dp"
+                android:gravity="center"
+                tools:text="fdsafsda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

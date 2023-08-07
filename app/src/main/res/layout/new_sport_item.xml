@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/item"
+    android:clickable="true"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/sport_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="球类: 足球"
+        android:textSize="@dimen/list_text_size"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="等待开奖"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tz_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="投注金额：0元"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/sport_name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/state"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/view"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="查看"
+            android:textSize="10sp"
+            android:textColor="@color/color_red"
+            android:background="@drawable/list_btn_selector"/>
+
+    </LinearLayout>
+
+    <!--主客队-->
+    <LinearLayout
+        android:id="@+id/teams"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/btns"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/league"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="xx联赛"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentRight="true"
+            />
+
+        <TextView
+            android:id="@+id/teamstv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="A队 vs B队"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/teams"
+            />
+
+    </LinearLayout>
+
+    <!--盘，赔率-->
+    <LinearLayout
+        android:id="@+id/pan_peilv"
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_below="@id/teams"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/pan_peilv_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="今日-亚洲盘-赔率(0.0)"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/color_red"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/teams"
+            />
+
+        <TextView
+            android:id="@+id/ball_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="足球(全场-让球)"
+            android:textSize="@dimen/text_size_small"
+            android:textColor="@color/tv_blue"
+            android:layout_marginTop="3dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/teams"
+            />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0000-00-00 00:00:00"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/pan_peilv"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        />
+
+</RelativeLayout>

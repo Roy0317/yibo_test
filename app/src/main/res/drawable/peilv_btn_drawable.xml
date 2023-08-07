@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <solid android:color="@color/light_color_red" />
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/color_red" />
+
+            <size android:width="@dimen/small_ballon_size"
+                android:height="@dimen/order_ballon_size" />
+        </shape>
+    </item>
+</layer-list>

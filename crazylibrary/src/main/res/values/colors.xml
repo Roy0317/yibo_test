@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <color name="crazy_progress_wheel_color">#EC2829</color>
+    <color name="crazy_colorPrimary">#EC2829</color>
+    <color name="crazy_dialog_middle_btn_color">#00796B</color>
+    <color name="crazy_dialog_toast_btn_color">#8a000000</color>
+    <color name="crazy_dialog_content_txt_color">#8a000000</color>
+    <color name="crazy_dialog_loading_content_txt_color">#e3e3e3</color>
+    <color name="crazy_dialog_title_txt_color">#DEffffff</color>
+    <color name="crazy_dialog_loading_front_color">#c0c0c0</color>
+
+</resources>

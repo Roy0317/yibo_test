@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--topBarView 高度-->
+    <dimen name="top_view_height">50dp</dimen>
+
+</resources>

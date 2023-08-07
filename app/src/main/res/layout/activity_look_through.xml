@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title"/>
+
+    <ImageView
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="25dp"
+        android:layout_gravity="center"
+        android:src="@mipmap/green_right"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="13dp"
+        android:layout_gravity="center"
+        android:text="@string/wait_look_through"
+        android:textSize="16sp"
+        android:textColor="@color/black"
+        />
+
+    <LinearLayout
+        android:id="@+id/act_look_through_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:gravity="center"
+            android:background="@color/red"
+            android:text="@string/agent_info"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/look_through_content_bg"
+            >
+
+            <ListView
+                android:id="@+id/act_look_through_lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@null"
+                />
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/act_look_through_btn"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/commit"
+        android:textSize="14sp"
+        android:textColor="@color/colorWhite"
+        android:background="@drawable/charge_money_btn_selector"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:singleLine="true"
+        android:layout_gravity="center"
+        android:text="提示：待审核通过，请返回电脑端登录账号"
+        android:textColor="@color/red"
+        android:textSize="13.2sp"
+        />
+
+
+
+
+
+</LinearLayout>

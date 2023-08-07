@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?><!-- new version login view -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:fresco="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical"
+    tools:context=".activity.LoginActivity">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title" />
+
+    <com.facebook.drawee.view.SimpleDraweeView
+        android:id="@+id/logo"
+        android:layout_width="250dp"
+        android:layout_height="120dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:scaleType="centerCrop"
+        fresco:actualImageScaleType="fitCenter" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/input_area"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="5dip"
+            android:layout_marginRight="30dip"
+            android:orientation="vertical"
+            android:paddingTop="10dip">
+
+            <!-- 帐号 -->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="0dip">
+
+                <LinearLayout
+                    android:id="@+id/user_right_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:id="@+id/above"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/user_name"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/input_frame_bg"
+                            android:clickable="true"
+                            android:drawableLeft="@drawable/icon_auto_login"
+                            android:drawablePadding="0dip"
+                            android:focusable="true"
+                            android:hint="@string/hint_account"
+                            android:imeOptions="actionNext"
+                            android:longClickable="false"
+                            android:maxLines="1"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="8dip"
+                            android:paddingRight="10dip"
+                            android:paddingBottom="8dip"
+                            android:singleLine="true"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint" />
+
+                        <!-- 用户名右侧删除用户名区域 -->
+                        <LinearLayout
+                            android:id="@+id/clean_text"
+                            android:layout_width="30dip"
+                            android:layout_height="30dip"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:orientation="vertical"
+                            android:visibility="gone">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="5dip"
+                                android:clickable="false"
+                                android:focusable="false"
+                                android:src="@mipmap/icon_delete" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 密码输入 -->
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip">
+
+                <LinearLayout
+                    android:id="@+id/pwd_right_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/user_pwd"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/input_frame_bg"
+                            android:drawableLeft="@drawable/icon_auto_pass"
+                            android:drawablePadding="0dip"
+                            android:hint="@string/hint_pwd"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:longClickable="false"
+                            android:maxLines="1"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="8dip"
+                            android:paddingRight="10dip"
+                            android:paddingBottom="8dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint" />
+
+                        <ImageView
+                            android:id="@+id/switch_pwd"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginTop="5dip"
+                            android:clickable="true"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <!-- 图形验证码 -->
+            <RelativeLayout
+                android:id="@+id/vcode_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dip"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:id="@+id/vcode_right_layout"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.0"
+                        android:orientation="horizontal">
+
+                        <com.yibo.yiboapp.ui.XEditText
+                            android:id="@+id/vcode_input"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/input_frame_bg"
+                            android:drawablePadding="0dip"
+                            android:hint="@string/hint_vcode"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            android:longClickable="false"
+                            android:maxLines="1"
+                            android:paddingLeft="10dip"
+                            android:paddingTop="8dip"
+                            android:paddingRight="10dip"
+                            android:paddingBottom="8dip"
+                            android:textColor="#3E3D3D"
+                            android:textColorHint="@color/input_text_hint" />
+
+                        <ImageView
+                            android:id="@+id/vcode_img"
+                            android:layout_width="60dp"
+                            android:layout_height="40dp"
+                            android:layout_marginLeft="10dp"
+                            android:background="@color/light_gray"
+                            android:clickable="true"
+                            android:gravity="center_vertical"
+                            android:visibility="visible" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/enter_checkbox"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="20dip"
+            android:layout_marginRight="30dip"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <CheckBox
+                android:id="@+id/auto_enter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/auto_enter_string"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <CheckBox
+                android:id="@+id/remember_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_weight="1"
+                android:checked="true"
+                android:text="@string/remember_code"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:visibility="visible" />
+
+            <!-- 立即注册 -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/register_now"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:autoLink="all"
+                    android:clickable="true"
+                    android:paddingTop="5dip"
+                    android:paddingBottom="5dip"
+                    android:text="@string/register_now"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/login_btn"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/charge_money_btn_selector"
+            android:text="@string/login"
+            android:textColor="@color/colorWhite"
+            android:textSize="14sp" />
+
+        <!-- 忘记密码 -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dip"
+            android:layout_marginTop="10dip"
+            android:layout_marginRight="30dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/guest_login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:clickable="true"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:text="@string/play_free"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/route_checking"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:clickable="true"
+                android:text="路由检测"
+                android:textColor="@color/grey"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/online_custom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:clickable="true"
+                android:text="@string/online_service"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+
+            <TextView
+                android:id="@+id/forget_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:clickable="true"
+                android:paddingTop="5dip"
+                android:paddingBottom="5dip"
+                android:text="@string/forget_pwd"
+                android:textColor="@color/grey"
+                android:textSize="14sp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/agent_reg"
+            android:layout_width="90dp"
+            android:layout_height="28dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/apply_agent_reg_bg"
+            android:gravity="center"
+            android:text="@string/agent_register"
+            android:textColor="@color/grey"
+            android:textSize="14sp"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/rl_choose_route"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:layout_marginBottom="15dp"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="线路切换—"
+            android:textColor="@color/red" />
+        <TextView
+            android:id="@+id/tv_choose_route"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_versio_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="30dp"
+        android:gravity="center" />
+</LinearLayout>

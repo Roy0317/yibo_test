@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/item"
+    android:background="@color/colorWhite">
+
+    <com.yibo.yiboapp.ui.TouzhuFuncView
+        android:id="@+id/weishu_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="1.0"
+        android:gravity="center_vertical|left"
+        android:orientation="horizontal"
+        android:visibility="visible"
+        app:view_category="2"
+        app:view_clickable="true"
+        app:view_unselect_drawable="@drawable/light_gred_rect"
+        app:view_select_drawable="@drawable/light_gred_rect_press"
+        app:view_size="@dimen/weishu_ballon_size"
+        app:view_string="@string/weishu_string"
+        app:view_textcolor_normal="@color/lightgrey"
+        app:view_textcolor_select="@color/colorWhite">
+
+    </com.yibo.yiboapp.ui.TouzhuFuncView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/play_rule"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="规则"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingTop="3dp"
+            android:paddingBottom="3dp"
+            android:gravity="center_vertical"
+            android:layout_gravity="center_vertical"
+            android:visibility="visible"
+            android:layout_alignParentLeft="true"
+            android:textSize="14sp"
+            android:textColor="@color/grey"
+            android:background="@drawable/light_gred_borer"
+            />
+
+        <com.yibo.yiboapp.ui.TouzhuFuncView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/func_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_weight="1.0"
+            app:view_category="1"
+            app:view_clickable="true"
+            android:gravity="right"
+            android:layout_marginLeft="10dp"
+            app:view_unselect_drawable="@drawable/light_gred_rect"
+            app:view_select_drawable="@drawable/light_gred_rect_press"
+            app:view_string="@string/func_string"
+            app:view_size="@dimen/funcview_ballon_size"
+            app:view_textcolor_normal="@color/lightgrey"
+            app:view_textcolor_select="@color/colorWhite"
+            >
+
+        </com.yibo.yiboapp.ui.TouzhuFuncView>
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/ball_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentRight="true"
+        android:numColumns="6"
+        android:layout_below="@id/qihao"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:scrollbars="none"
+        android:stretchMode="columnWidth"
+        android:horizontalSpacing="0dp"
+        android:verticalSpacing="0dp">
+    </GridView>
+
+
+
+</LinearLayout>

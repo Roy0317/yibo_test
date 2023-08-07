@@ -1,0 +1,613 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title" />
+
+    <com.yibo.yiboapp.ui.BounceScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/app_auto_login_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="自动登录"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/auto_login_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:checked="true" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <!--<RelativeLayout-->
+            <!--android:id="@+id/remember_pwd_layout"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/caipiao_item_bg"-->
+            <!--android:clickable="true"-->
+            <!--android:visibility="visible"-->
+            <!--android:gravity="center_vertical"-->
+            <!--android:paddingBottom="5dp"-->
+            <!--android:paddingTop="5dp">-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:padding="8dp"-->
+            <!--android:text="记住密码"-->
+            <!--android:textColor="@color/grey"-->
+            <!--android:textSize="16sp"/>-->
+
+            <!--<CheckBox-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:layout_marginRight="5dip"/>-->
+
+            <!--</RelativeLayout>-->
+
+            <!--<include layout="@layout/view_divider_dark_horizontal"/>-->
+
+            <RelativeLayout
+                android:id="@+id/yaoyiyao"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="摇一摇投注"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/yyy_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:checked="true" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+            <!-- 开关按钮声音-->
+            <RelativeLayout
+                android:id="@+id/touzhu_sound"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="下注声音"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/sound_checkbox"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:checked="true" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+            <!--自动更新功能-->
+            <RelativeLayout
+                android:id="@+id/rl_auto_check_update"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="自动检测更新"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_auto_check_update"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+            <!--开奖声音-->
+            <RelativeLayout
+                android:id="@+id/rl_kaijiangshengyin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="开奖声音"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_kaijiangshengyin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:checked="true" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/rl_wenxintishi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="投注页温馨提示"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_wenxintishi"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:checked="true" />
+            </RelativeLayout>
+
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/act_setting_main_popup_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="首页弹窗间隔时间"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/act_setting_main_popup_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="8dp"
+                    android:text=""
+                    android:textColor="@color/color_txt_select"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/act_setting_main_popup_img"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/more" />
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/start_up_activity_count_down"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="启动页倒计时"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_count_down"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:checked="true" />
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/start_new_work_service"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="启动/停止网络检测"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/cb_network_service"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:checked="true" />
+
+            </RelativeLayout>
+
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <include
+                layout="@layout/view_divider_dark_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_safety_center"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="安全中心"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/more" />
+            </RelativeLayout>
+
+            <include
+                android:id="@+id/divider_safety_center"
+                layout="@layout/view_divider_dark_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/clear_cache_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="清理缓存"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/more" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/clear_browser_layout"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv_clear_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="清除支付浏览器"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/tv_browser"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/tv_clear_text"
+                    android:layout_toRightOf="@+id/tv_clear_text"
+                    android:gravity="center"
+                    android:padding="8dp"
+                    android:text="qq浏览器"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+
+                    />
+
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/more" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <include
+                layout="@layout/view_divider_dark_horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="20dp"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/rl_app_route_choose"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:id="@+id/tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="线路切换"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:id="@+id/iv"
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/more" />
+
+                <TextView
+                    android:id="@+id/tv_choose_route"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="end"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv"
+                    android:layout_toLeftOf="@id/iv"
+                    android:textColor="@color/red"
+                    android:text="默认"
+                    android:paddingRight="@dimen/dp_35"
+                    />
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_app_route_checking"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="路由检测"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/more" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/rl_app_setting_version"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="版本检测"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/more" />
+
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <RelativeLayout
+                android:id="@+id/rl_app_setting_about"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/caipiao_item_bg"
+                android:clickable="true"
+                android:gravity="center_vertical"
+                android:paddingTop="5dp"
+                android:paddingBottom="5dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="8dp"
+                    android:text="关于我们"
+                    android:textColor="@color/grey"
+                    android:textSize="16sp" />
+
+                <ImageView
+                    android:layout_width="25dip"
+                    android:layout_height="25dip"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dip"
+                    android:src="@drawable/more" />
+            </RelativeLayout>
+
+            <include layout="@layout/view_divider_dark_horizontal" />
+
+            <Button
+                android:id="@+id/exit"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/charge_money_btn_selector"
+                android:text="@string/exit_app"
+                android:textColor="@color/colorWhite"
+                android:textSize="14sp" />
+
+
+        </LinearLayout>
+    </com.yibo.yiboapp.ui.BounceScrollView>
+</LinearLayout>

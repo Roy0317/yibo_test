@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dark_grey"
+    android:orientation="horizontal">
+    <!--每隔-->
+    <LinearLayout
+        android:id="@+id/peige_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/meige"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="每隔" />
+
+        <com.yibo.yiboapp.ui.XEditText
+            android:id="@+id/meige_input"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/input_frame_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="5"
+            android:text="1"
+            android:textColor="@color/red" />
+
+    </LinearLayout>
+    <!--倍X-->
+    <LinearLayout
+        android:id="@+id/beix_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="隔X" />
+
+        <com.yibo.yiboapp.ui.XEditText
+            android:id="@+id/beix_input"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/input_frame_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="2"
+            android:text="2"
+            android:textColor="@color/red" />
+
+    </LinearLayout>
+    <!--起始倍数-->
+    <LinearLayout
+        android:id="@+id/start_beishu_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="5dp"
+        android:layout_weight="1.0"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="起始倍数" />
+
+        <com.yibo.yiboapp.ui.XEditText
+            android:id="@+id/start_bei_input"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/input_frame_bg"
+            android:gravity="center"
+            android:inputType="number"
+            android:maxLength="5"
+            android:text="1"
+            android:textColor="@color/red" />
+
+    </LinearLayout>
+
+</LinearLayout>

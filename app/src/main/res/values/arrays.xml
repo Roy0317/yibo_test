@@ -1,0 +1,336 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string-array name="caipiao_mode">
+        <item>赔率模式</item>
+        <item>奖金模式</item>
+    </string-array>
+
+    <string-array name="convert_array">
+        <item>转入</item>
+        <item>转出</item>
+    </string-array>
+
+    <string-array name="play_method_select_array">
+        <item>玩法</item>
+        <item>规则</item>
+    </string-array>
+
+    <string-array name="touzhu_more_array">
+        <item>投注记录</item>
+        <item>历史开奖</item>
+        <item>玩法说明</item>
+        <item>今日盈亏</item>
+        <item>设置</item>
+    </string-array>
+
+    <string-array name="touzhu_jianjin_array">
+        <item>投注记录</item>
+        <item>历史开奖</item>
+        <item>玩法说明</item>
+        <item>今日盈亏</item>
+        <item>设置</item>
+    </string-array>
+
+    <string-array name="order_cart_funcs">
+        <item>投注记录</item>
+        <item>投注说明</item>
+    </string-array>
+
+    <string-array name="caipiao_touzhu_categories">
+        <item>全部,all</item>
+        <item>未开奖,init</item>
+        <item>已中奖,win</item>
+        <item>未中奖,lost</item>
+        <item>追号中,follow</item>
+    </string-array>
+
+    <string-array name="sports_touzhu_categories">
+        <item>全部</item>
+        <item>已中奖</item>
+        <item>未开奖</item>
+        <item>未成功</item>
+    </string-array>
+
+    <string-array name="lhc_touzhu_categories">
+        <item>全部</item>
+        <item>未开奖</item>
+        <item>已中奖</item>
+        <item>未中奖</item>
+    </string-array>
+
+    <string-array name="realren_platform_categories">
+        <item>全部</item>
+        <item>AG</item>
+        <item>MG</item>
+        <item>BBIN</item>
+        <item>ALLBET</item>
+        <item>OG</item>
+        <item>DS</item>
+        <item>BG</item>
+        <item>DG</item>
+        <item>皇家真人(RG)</item>
+        <item>性感赌场(NT)</item>
+        <item>EBET真人</item>
+        <item>利博真人</item>
+    </string-array>
+
+    <!--电子游戏记录-->
+    <string-array name="game_platform_categories">
+        <item>全部</item>
+        <item>MG电子游艺</item>
+        <item>AG电子游艺</item>
+        <item>bbin电子游艺</item>
+        <item>QT电子游艺</item>
+        <item>PT电子游艺</item>
+        <item>CQ9电子游艺</item>
+        <item>PG电子游艺</item>
+        <item>BG电子游艺</item>
+    </string-array>
+
+    <string-array name="chess_platform_categories">
+        <item>全部</item>
+        <item>NB记录</item>
+        <item>开元记录</item>
+        <item>YG记录</item>
+        <item>乐游记录</item>
+        <item>YB记录</item>
+        <item>百胜记录</item>
+    </string-array>
+
+    <string-array name="qiuzhong_categories">
+        <item>全部</item>
+        <item>足球</item>
+        <item>篮球</item>
+    </string-array>
+
+    <string-array name="point_exchange_record">
+        <item>全部类型</item>
+        <item>活动积分扣除</item>
+        <item>会员签到</item>
+        <item>现金兑换积分</item>
+        <item>积分兑换现金</item>
+        <item>存款赠送</item>
+        <item>人工添加</item>
+        <item>人工扣除</item>
+        <item>大转盘活动</item>
+        <item>等级权限升级赠送</item>
+
+    </string-array>
+
+
+
+
+    <string-array name="touzhu_categories">
+        <item>全部</item>
+    </string-array>
+
+    <string-array name="oprate_money_record_array">
+        <item>充值记录</item>
+        <item>提款记录</item>
+    </string-array>
+
+    <string-array name="sport_tabs">
+        <item>滚球</item>
+        <item>今日赛事</item>
+        <item>早盘</item>
+    </string-array>
+
+    <string-array name="touzhu_date">
+        <item>今天,today</item>
+        <item>昨天,yesterday</item>
+        <item>近一周,week</item>
+        <item>近30天,month</item>
+        <item>30天以前,monthbefore</item>
+    </string-array>
+
+    <string-array name="real_game_touzhu_date">
+        <item>今天,today</item>
+        <item>昨天,yesterday</item>
+        <item>近一周,week</item>
+        <item>近30天,month</item>
+    </string-array>
+
+    <string-array name="sport_record_date">
+        <item>今天,1</item>
+        <item>昨天,2</item>
+        <item>近一周,3</item>
+        <item>近30天,4</item>
+    </string-array>
+
+
+    <string-array name="touzhu_caipico_category">
+        <item>分分时时彩,FFC</item>
+        <item>二分时时彩,EFC</item>
+        <item>五分时时彩,WFC</item>
+        <item>北京赛车,BJSC</item>
+        <item>幸运飞艇,XYFT</item>
+        <item>PC蛋蛋,PCEGGEGG</item>
+        <item>重庆时时彩,CYSSC</item>
+    </string-array>
+    <string-array name="bigpan_record_category">
+        <item>全部</item>
+        <item>现金</item>
+        <item>积分</item>
+        <item>商品</item>
+    </string-array>
+    <string-array name="shengxiao_str">
+        <item>鼠</item>
+        <item>牛</item>
+        <item>虎</item>
+        <item>兔</item>
+        <item>龙</item>
+        <item>蛇</item>
+        <item>马</item>
+        <item>羊</item>
+        <item>猴</item>
+        <item>鸡</item>
+        <item>狗</item>
+        <item>猪</item>
+
+    </string-array>
+
+    <!--<string-array name="shengxiao_array">-->
+    <!--<item>鼠|10,22,34,46</item>-->
+    <!--<item>牛|09,21,33,45</item>-->
+    <!--<item>虎|08,20,32,44</item>-->
+    <!--<item>兔|07,19,31,43</item>-->
+    <!--<item>龙|06,18,30,42</item>-->
+    <!--<item>蛇|05,17,29,41</item>-->
+    <!--<item>马|04,16,28,40</item>-->
+    <!--<item>羊|03,15,27,39</item>-->
+    <!--<item>猴|02,14,26,38</item>-->
+    <!--<item>鸡|01,13,25,37,49</item>-->
+    <!--<item>狗|12,24,36,48</item>-->
+    <!--<item>猪|11,23,35,47</item>-->
+
+    <!--</string-array>-->
+
+    <string-array name="weishu_array">
+        <item>10,20,30,40</item>
+        <item>01,11,21,31,41</item>
+        <item>02,12,22,32,42</item>
+        <item>03,13,23,33,43</item>
+        <item>04,14,24,34,44</item>
+        <item>05,15,25,35,45</item>
+        <item>06,16,26,36,46</item>
+        <item>07,17,27,37,47</item>
+        <item>08,18,28,38,48</item>
+        <item>09,19,29,39,49</item>
+
+    </string-array>
+
+
+    <string-array name="account_change_title">
+        <item>时间</item>
+    </string-array>
+
+
+    <string-array name="names">
+        <item>无</item>
+        <item>无</item>
+        <item>无</item>
+        <item>无</item>
+        <item>无</item>
+
+    </string-array>
+
+
+    <string-array name="bank_card">
+        <item>建设银行</item>
+        <item>工商银行</item>
+        <item>农业银行</item>
+        <item>中国邮政银行</item>
+        <item>中国银行</item>
+        <item>中国招商银行</item>
+        <item>中国交通银行</item>
+        <item>中国民生银行</item>
+        <item>中信银行</item>
+        <item>中国兴业银行</item>
+        <item>浦发银行</item>
+        <item>平安银行</item>
+        <item>华夏银行</item>
+        <item>广州银行</item>
+        <item>BEA东亚银行</item>
+        <item>广州农商银行</item>
+        <item>顺德农商银行</item>
+        <item>北京银行</item>
+        <item>杭州银行</item>
+        <item>温州银行</item>
+        <item>上海农商银行</item>
+        <item>中国光大银行</item>
+        <item>渤海银行</item>
+        <item>浙商银行</item>
+        <item>晋商银行</item>
+        <item>汉口银行</item>
+        <item>上海银行</item>
+        <item>广发银行</item>
+        <item>深圳发展银行</item>
+        <item>东莞银行</item>
+        <item>宁波银行</item>
+        <item>南京银行</item>
+        <item>北京农商银行</item>
+        <item>重庆银行</item>
+        <item>广西农村信用社</item>
+        <item>吉林银行</item>
+        <item>江苏银行</item>
+        <item>成都银行</item>
+        <item>尧都区农村信用联社</item>
+        <item>浙江稠州商业银行</item>
+        <item>珠海市农村信用合作联社</item>
+        <item>其他</item>
+    </string-array>
+
+    <string-array name="zhangbian_info">
+        <item>全部</item>
+        <item>人工加款</item>
+        <item>人工扣款</item>
+        <item>在线提款失败</item>
+        <item>在线提款</item>
+        <item>在线支付</item>
+        <item>快速入款</item>
+        <item>一般入款</item>
+        <item>体育投注</item>
+        <item>反水加钱</item>
+        <item>反水扣钱</item>
+        <item>反点加钱</item>
+        <item>反点扣钱</item>
+        <item>三方额度转入系统额度</item>
+        <item>系统额度转入三方额度</item>
+        <item>三方转账失败</item>
+        <item>活动中奖</item>
+        <item>现金兑换积分</item>
+        <item>积分兑换现金</item>
+        <item>系统接口加款</item>
+        <item>注册赠送</item>
+        <item>存款赠送</item>
+        <item>彩票投注</item>
+        <item>彩票撤单</item>
+        <item>彩票派奖回滚</item>
+        <item>六合彩投注</item>
+        <item>六合彩派奖</item>
+        <item>六合彩派奖回滚</item>
+        <item>体育投注</item>
+        <item>体育派奖</item>
+        <item>体育撤单</item>
+        <item>体育派奖回滚</item>
+        <item>每日加奖</item>
+        <item>每周亏损奖励</item>
+        <item>赠送彩金</item>
+        <item>红包活动中奖</item>
+        <item>余额生金发送奖励</item>
+        <item>等级权限升级赠送</item>
+        <item>代金券充值</item>
+        <item>充值卡入款</item>
+
+    </string-array>
+
+
+    <string-array name="feedback_status">
+        <item>全部</item>
+        <item>待回复</item>
+        <item>已回复</item>
+    </string-array>
+
+</resources>

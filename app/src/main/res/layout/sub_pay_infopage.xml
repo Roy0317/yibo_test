@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:clickable="true"
+    android:minHeight="60dp"
+    android:orientation="horizontal">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="100dp"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="10dp"
+        android:ellipsize="end"
+        android:gravity="center_vertical"
+        android:maxLength="10"
+        android:maxLines="1"
+        android:text="ddd"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:layout_weight="1.0"
+        android:gravity="center_vertical"
+        android:text="支付宝"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+    <com.yibo.yiboapp.ui.XEditText
+        android:id="@+id/content_input"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_weight="1.0"
+        android:background="@null"
+        android:focusable="true"
+        android:hint=""
+        android:imeOptions="actionNext"
+        android:longClickable="false"
+        android:maxLines="1"
+        android:paddingLeft="10dip"
+        android:paddingTop="8dip"
+        android:paddingRight="10dip"
+        android:paddingBottom="8dip"
+        android:singleLine="true"
+        android:textColor="#3E3D3D"
+        android:textColorHint="@color/input_text_hint" />
+
+    <TextView
+        android:id="@+id/copyBtn"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:layout_gravity="center_vertical"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/grey_corner_btn_bg"
+        android:clickable="true"
+        android:gravity="center"
+        android:text="复制"
+        android:textSize="14sp"
+        android:visibility="gone" />
+
+</LinearLayout>

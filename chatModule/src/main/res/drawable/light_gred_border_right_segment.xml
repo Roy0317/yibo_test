@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android" >
+    <item>
+        <shape>
+            <solid android:color="@color/white" />
+            <stroke
+                android:width="0.5dp"
+                android:color="@color/light_gray_5" />
+            <corners android:topRightRadius="5dp" android:bottomRightRadius="5dp" />
+            <size android:width="@dimen/ballon_size" android:height="@dimen/ballon_size" />
+        </shape>
+    </item>
+</layer-list>

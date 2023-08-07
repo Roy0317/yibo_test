@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:clickable="true"
+    android:background="@color/white"
+    android:id="@+id/layout"
+    >
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="10dp"
+        android:text="ddd"
+        android:textSize="14sp"
+        />
+
+    <Button
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="1.0"
+        android:visibility="visible"
+        android:background="@drawable/pay_green_button"
+        android:layout_marginLeft="50dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:text="点击支付宝转帐"
+        android:textSize="14sp"
+        />
+
+
+    <TextView
+        android:id="@+id/copyBtn"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:visibility="visible"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:layout_marginLeft="50dp"
+        android:background="@drawable/grey_corner_btn_bg"
+        android:text="复制"
+        android:clickable="true"
+        android:textSize="14sp"
+        />
+
+</LinearLayout>

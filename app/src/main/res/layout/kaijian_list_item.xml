@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:clickable="true"
+    android:id="@+id/item"
+    android:background="@drawable/caipiao_item_bg"
+    android:focusable="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="5dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginBottom="4dp"
+        android:layout_marginTop="5dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:orientation="vertical"
+        >
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_centerVertical="true"
+            android:background="@drawable/default_lottery"
+            />
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="分分时时彩"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_toRightOf="@+id/img"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/grey"
+            />
+
+        <GridView
+            android:id="@+id/numbers"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:numColumns="8"
+            android:focusable="false"
+            android:focusableInTouchMode="false"
+            android:layout_toRightOf="@id/img"
+            android:visibility="visible"
+            android:layout_below="@id/name"
+            android:layout_marginTop="5dp"
+            android:layout_alignLeft="@id/name"
+            android:scrollbars="none"
+            android:touchscreenBlocksFocus="false"
+            android:clickable="false"
+            android:stretchMode="columnWidth"
+            android:layout_marginBottom="5dp"
+            android:horizontalSpacing="1dp"
+            android:verticalSpacing="1dp">
+        </GridView>
+
+
+        <TextView
+            android:id="@+id/empty_numbers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/name"
+            android:layout_alignLeft="@id/name"
+            android:layout_toRightOf="@id/img"
+            android:layout_marginTop="5dp"
+            android:visibility="gone"
+            android:text="没有开奖号码"
+            />
+
+        <TextView
+            android:id="@+id/qihao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="第34123期"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:textSize="@dimen/text_size_small"
+            android:layout_alignParentRight="true"
+            android:textColor="@color/grey"
+            />
+
+    </RelativeLayout>
+
+</RelativeLayout>

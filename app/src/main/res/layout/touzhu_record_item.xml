@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:id="@+id/item"
+    android:clickable="true"
+    android:background="@color/colorWhite">
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="分分时时彩"
+        android:textSize="@dimen/list_text_size"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="未开奖"
+        android:layout_marginRight="10dp"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentRight="true"
+        android:textColor="@color/colorPrimary"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/play_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="玩法："
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/name"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        />
+
+    <TextView
+        android:id="@+id/haoma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="投注号码："
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/play_name"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/qihao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="投注期号："
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/haoma"
+        android:layout_marginLeft="10dp"
+        />
+
+    <TextView
+        android:id="@+id/tz_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="投注金额：34元"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/qihao"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="0dp"
+        />
+
+    <LinearLayout
+        android:id="@+id/btns"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/state"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/haoma"
+        android:layout_marginRight="10dp"
+
+        android:layout_height="wrap_content">
+
+        <Button
+            android:visibility="invisible"
+            android:id="@+id/view"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="查看"
+            android:textSize="10sp"
+            android:textColor="@color/color_red"
+            android:background="@drawable/list_btn_selector"/>
+
+        <Button
+            android:id="@+id/cancel"
+            android:layout_width="40dp"
+            android:layout_height="25dp"
+            android:text="撤单"
+            android:textSize="10sp"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/color_red"
+            android:background="@drawable/list_btn_selector"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/pj_fee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="派奖金额: 10元"
+        android:layout_below="@id/tz_fee"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        />
+
+
+    <TextView
+        android:id="@+id/time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="2017-08-12 19:00:00"
+        android:textSize="@dimen/text_size_small"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:layout_below="@id/btns"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"
+        />
+
+</RelativeLayout>

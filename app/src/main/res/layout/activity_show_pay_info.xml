@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/colorWhite">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:text="订单提交成功！"
+        android:textColor="@color/red"
+        android:textSize="22sp"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+        <com.yibo.yiboapp.views.ShowPayInfoView
+            android:id="@+id/info_view1"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:spiView_left = "收款姓名：" />
+
+        <com.yibo.yiboapp.views.ShowPayInfoView
+            android:id="@+id/info_view2"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:spiView_left = "收款账号：" />
+
+        <com.yibo.yiboapp.views.ShowPayInfoView
+            android:id="@+id/info_view3"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            app:spiView_left = "充值金额：" />
+
+        <com.yibo.yiboapp.views.ShowPayInfoView
+            android:id="@+id/info_view4"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone"/>
+
+        <com.yibo.yiboapp.views.ShowPayInfoView
+            android:id="@+id/info_view5"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone"/>
+
+        <com.yibo.yiboapp.views.ShowPayInfoView
+            android:id="@+id/info_view6"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone"/>
+
+        <com.yibo.yiboapp.views.ShowPayInfoView
+            android:id="@+id/info_view7"
+            android:layout_width="match_parent"
+            android:gravity="center_vertical"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+    <!-- 充值扫码区域-->
+    <LinearLayout
+        android:id="@+id/qrcode_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_weight="1"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:visibility="visible"
+        >
+
+        <ImageView
+            android:id="@+id/act_show_pay_info_qrcode"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            />
+
+        <TextView
+            android:id="@+id/act_show_pay_info_tips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:text="若订单已经提交但还未扫码付款，请再次扫码付款！"
+            android:textColor="@color/color_txt_select" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

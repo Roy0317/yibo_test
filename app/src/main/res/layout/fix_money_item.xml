@@ -1,0 +1,10 @@
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/item"
+    android:layout_width="60dp"
+    android:layout_height="30dp"
+    android:gravity="center"
+    android:background="@drawable/grey_corner_btn_bg"
+    android:text=""
+    android:clickable="true"
+    android:textSize="14sp"
+    />

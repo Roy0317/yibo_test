@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:background="@color/colorWhite"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/driver_line_color"
+        >
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="15dp"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="@string/zhudang_detail"
+            android:textColor="@color/colorPrimary"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/qihao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="当前期号：20170918112312"
+        />
+
+    <TextView
+        android:id="@+id/beishu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginLeft="10dp"
+        android:text="追号倍数：4倍"
+        />
+
+    <TextView
+        android:id="@+id/total_money"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="10dp"
+        android:text="下注金额：40元"
+        />
+
+    <include layout="@layout/view_divider_dark_horizontal"/>
+
+    <com.baoyz.swipemenulistview.SwipeMenuListView
+        android:id="@+id/cListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:divider="@drawable/business_line"
+        android:dividerHeight="1dip"
+        android:fadingEdge="none"
+        android:gravity="top"
+        android:scrollbars="none"
+        android:listSelector="@android:color/transparent"
+        android:background="@drawable/order_list_wrapper"
+        >
+
+
+    </com.baoyz.swipemenulistview.SwipeMenuListView>
+
+</LinearLayout>

@@ -1,0 +1,118 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:scrollbars="none"
+    android:orientation="vertical"
+    android:id="@+id/item"
+    android:background="@color/dark_grey"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        android:visibility="visible"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintDepositInfo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="20dp"
+        android:visibility="gone">
+        <TextView
+            android:id="@+id/tagDepositAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            android:text="充值金额"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/editDepositAmount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toRightOf="@id/tagDepositAmount"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tagDepositAmount"
+            app:layout_constraintBottom_toBottomOf="@id/tagDepositAmount"
+            android:layout_marginLeft="40dp"
+            android:padding="8dp"
+            android:background="@color/transparent"
+            android:textSize="16sp"
+            android:hint="请输入金额"
+            android:inputType="numberDecimal"/>
+
+        <TextView
+            android:id="@+id/tagDepositName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tagDepositAmount"
+            app:layout_constraintLeft_toLeftOf="@id/tagDepositAmount"
+            android:layout_marginTop="44dp"
+            android:text="存款人姓名"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/editDepositName"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/editDepositAmount"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tagDepositName"
+            app:layout_constraintBottom_toBottomOf="@id/tagDepositName"
+            android:padding="8dp"
+            android:background="@color/transparent"
+            android:textSize="16sp"
+            android:hint="请填写真实姓名"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/tagDepositNote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/tagDepositName"
+            app:layout_constraintLeft_toLeftOf="@id/tagDepositAmount"
+            android:layout_marginTop="44dp"
+            android:text="转帐备注"
+            android:textSize="12sp"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/editDepositNote"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintLeft_toLeftOf="@id/editDepositAmount"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tagDepositNote"
+            app:layout_constraintBottom_toBottomOf="@id/tagDepositNote"
+            android:padding="8dp"
+            android:background="@color/transparent"
+            android:textSize="16sp"
+            android:hint="请输入转帐备注"
+            android:inputType="text"/>
+
+        <TextView
+            android:id="@+id/buttonNext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/charge_money_btn_selector"
+            android:gravity="center"
+            android:text="下一步"
+            android:textColor="@color/colorWhite"
+            android:layout_marginBottom="20dp"
+            android:textSize="16sp"
+            android:focusable="true"
+            android:clickable="true"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

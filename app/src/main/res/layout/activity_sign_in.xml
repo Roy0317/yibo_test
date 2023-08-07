@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:calendarview="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff23c">
+
+    <ImageView
+        android:layout_marginTop="50dp"
+        android:id="@+id/imageBg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitXY"
+        android:src="@drawable/sign_in_bg" />
+
+    <LinearLayout
+        android:id="@+id/llSignIn"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="15dp"
+        android:background="@drawable/sign_in_btn_bg"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="invisible">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本月已连续签到"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/signInDay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="0"
+                android:textColor="#fff23c"
+                android:textSize="22sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="天"
+                android:textColor="@color/white"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/signInBtn"
+            style="@style/btnConfirm"
+            android:layout_width="210dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            android:height="40dp"
+            android:text="打卡签到"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_above="@id/llSignIn"
+        android:layout_below="@+id/imageBg"
+        android:layout_marginTop="-30dp"
+        android:background="@drawable/sign_in_calendar_bg"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtSignInRecord"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="40dp"
+            android:padding="5dp"
+            android:text="查看签到记录"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:textStyle="bold" />
+
+
+        <LinearLayout
+            android:id="@+id/llMoth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="55dp"
+            android:orientation="horizontal">
+
+
+            <ImageView
+                android:id="@+id/imageLeftMoth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginRight="5dp"
+                android:padding="5dp"
+                android:src="@drawable/icon_arrow_left_small" />
+
+            <TextView
+                android:id="@+id/txtMonth"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textColor="@color/white"
+                android:gravity="center_vertical"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                tools:text="2018年8月" />
+
+            <ImageView
+                android:id="@+id/imageRightMoth"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="5dp"
+                android:padding="5dp"
+                android:src="@drawable/icon_arrow_right_small" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/txtWeek"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:layout_below="@id/llMoth"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/shape_purple_bg_top">
+
+            <TextView
+                style="@style/weekName"
+                android:text="周日"
+                android:textColor="#fff23c" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周一"
+                android:textColor="@color/white" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周二"
+                android:textColor="@color/white" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周三"
+                android:textColor="@color/white" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周四"
+                android:textColor="@color/white" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周五"
+                android:textColor="@color/white" />
+
+            <TextView
+                style="@style/weekName"
+                android:text="周六"
+                android:textColor="#fff23c" />
+        </LinearLayout>
+
+        <com.yibo.yiboapp.views.calendarview.weiget.CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/txtWeek"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="17dp"
+            android:layout_marginTop="2dp"
+            calendarview:choose_type="multi" />
+
+    </RelativeLayout>
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:src="@drawable/sign_in_bottom" />
+    <include android:id="@+id/title" layout="@layout/top_title"/>
+
+</RelativeLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <corners
+        android:bottomLeftRadius="5dp"
+        android:bottomRightRadius="5dp"
+        />
+    <gradient android:startColor="@color/plan_btn_start"
+        android:endColor="@color/plan_btn_end"/>
+
+</shape>

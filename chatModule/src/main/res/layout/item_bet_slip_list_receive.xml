@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="5dp">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="@dimen/dp_15"
+        android:layout_marginRight="5dp">
+
+        <com.example.anuo.immodule.view.CircleImageView
+            android:id="@+id/chat_item_header"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/ic_default_header" />
+
+        <com.example.anuo.immodule.view.CircleImageView
+            android:id="@+id/chat_item_admin"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:scaleType="centerInside"
+            android:src="@drawable/icon_admin" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <include
+            android:id="@+id/ll_msg_title"
+            layout="@layout/msg_title_receive" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcy_bet_slip"
+            android:layout_width="@dimen/max_bet_slip_width"
+            android:layout_height="240dp"
+            android:layout_below="@id/ll_msg_title"
+            android:layout_alignLeft="@id/ll_msg_title"
+            android:layout_marginTop="5dp"
+            android:background="@drawable/shape_bet_slip_list_bg" />
+
+        <ImageView
+            android:id="@+id/iv_scroll"
+            android:layout_width="@dimen/max_bet_slip_width"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/rcy_bet_slip"
+            android:layout_alignBottom="@id/rcy_bet_slip"
+            android:layout_marginBottom="@dimen/dp_10"
+            android:src="@drawable/icon_scroll" />
+
+        <TextView
+            android:id="@+id/ll_bet_slip_content"
+            android:layout_width="@dimen/max_bet_slip_width"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rcy_bet_slip"
+            android:background="@drawable/shape_bet_slip_list_btn_bg"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="@string/all_follow_bet"
+            android:textColor="@color/color_orange"
+            android:textSize="14sp" />
+    </RelativeLayout>
+
+</LinearLayout>

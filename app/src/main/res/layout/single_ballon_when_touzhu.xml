@@ -1,0 +1,19 @@
+<com.yibo.yiboapp.ui.TouzhuFuncView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/ballon"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:focusable="false"
+    android:focusableInTouchMode="false"
+    app:view_unselect_drawable="@drawable/red_border_normal"
+    app:view_select_drawable="@drawable/red_border_press"
+    app:view_textcolor_normal="@color/colorPrimary"
+    app:view_textcolor_select="@color/colorWhite"
+    app:view_clickable="true"
+    app:view_size="@dimen/ballon_size"
+    app:view_category="0"
+    app:view_click_anim_effect="true"
+    app:view_string="12">
+
+</com.yibo.yiboapp.ui.TouzhuFuncView>

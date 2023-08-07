@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/top_title" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="55dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="right"
+            android:minEms="6"
+            android:text="安全问题："
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <Spinner
+            android:id="@+id/spn_question"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/input_frame_bg"
+            android:paddingStart="26dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="55dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:minEms="6"
+            android:text="问题答案："
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edt_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/input_frame_bg"
+            android:hint="请输入答案"
+            android:inputType="text"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:paddingStart="26dp"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_10"
+        android:orientation="horizontal"
+        android:paddingLeft="20dp"
+        android:paddingRight="55dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:minEms="6"
+            android:text="再次输入答案："
+            android:textColor="#333333"
+            android:textSize="14sp" />
+
+        <EditText
+            android:id="@+id/edt_pwd_agin"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/input_frame_bg"
+            android:hint="请再次输入答案"
+            android:inputType="text"
+            android:maxLength="40"
+            android:maxLines="1"
+            android:padding="4dp"
+            android:paddingStart="26dp"
+            android:textSize="12dp" />
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="12dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="12dp"
+        android:background="@drawable/shape_vervification_bg_red"
+        android:text="登录"
+        android:textColor="@color/white"
+        android:textSize="18sp" />
+
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="26.5dp"
+        android:layout_marginRight="14dp"
+        android:text="页面说明："
+        android:textColor="#666666"
+        android:textSize="14sp"
+
+        android:textStyle="bold" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="14dp"
+        android:layout_marginTop="9dp"
+        android:layout_marginRight="14dp"
+        android:text="为了保护您的帐户安全，请您先设定一组安全问题与答案，未来若您的帐户在其他装置登入时会需要经过此安全问题认证
+        \n\n另外本安全问题经设定后若欲修改仅能重新设定
+        \n无法修改原问题项目或答案"
+        android:textColor="#666666"
+        android:textSize="12sp"
+
+        android:textStyle="bold" />
+
+</LinearLayout>

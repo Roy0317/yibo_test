@@ -1,0 +1,127 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_marginBottom="60dp"
+    android:background="@color/dark_grey"
+    android:scrollbars="none">
+
+    <com.yibo.yiboapp.views.VerticalSwipeRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:id="@+id/scroll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical">
+                <!--头部-->
+                <com.yibo.yiboapp.views.LobbyHeaderView
+                    android:id="@+id/header"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" />
+                <!--最新中奖-->
+                <LinearLayout
+                    android:id="@+id/ll_winning_data"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:gravity="center_vertical"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/dp_10"
+                        android:text="最新中奖:"
+                        android:textColor="@color/red"/>
+
+                    <com.gongwen.marqueen.MarqueeView
+                        android:id="@+id/marqueeView"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:flipInterval="2500"
+                        app:marqueeAnimDuration="500"
+                        app:smvTextColor="@color/white"
+                        app:smvTextEllipsize="end"
+                        app:smvTextGravity="center_vertical"
+                        app:smvTextSingleLine="true"
+                        app:smvTextSize="15sp"/>
+                </LinearLayout>
+                <!--游戏tab栏-->
+                <HorizontalScrollView
+                    android:id="@+id/tabScrollView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/dark_grey"
+                    android:scrollbars="none">
+                    <LinearLayout
+                        android:id="@+id/tabLayout"
+                        android:layout_width="wrap_content"
+                        android:layout_height="35dp"
+                        android:paddingTop="4dp"
+                        android:background="@color/dark_grey"
+                        android:orientation="horizontal"/>
+                </HorizontalScrollView>
+                <com.yibo.yiboapp.views.HorizontalScrollBar
+                    android:id="@+id/scrollBar"
+                    android:layout_marginTop="5dp"
+                    android:layout_width="30dp"
+                    android:layout_height="4dp"
+                    android:layout_gravity="center_horizontal"/>
+                <!--主游戏区-->
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="10dp"
+                    android:paddingTop="5dp"
+                    android:paddingBottom="10dp"
+                    android:layout_weight="1.0">
+
+                    <GridView
+                        android:id="@+id/gridGames"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        android:layout_weight="1.0"
+                        android:numColumns="3"
+                        tools:listitem="@layout/caipiao_item"
+                        android:scrollbars="none"
+                        android:stretchMode="columnWidth"
+                        android:visibility="visible"/>
+
+                    <include
+                        android:id="@+id/emptyView"
+                        layout="@layout/listview_empty_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp"
+                        android:visibility="gone"/>
+                </FrameLayout>
+            </LinearLayout>
+        </ScrollView>
+    </com.yibo.yiboapp.views.VerticalSwipeRefreshLayout>
+
+    <TextView
+        android:id="@+id/tv_online_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:background="#4D000000"
+        android:padding="2dp"
+        android:text="在线人数"
+        android:textColor="#ffffff"
+        android:textSize="14sp"
+        android:visibility="gone"/>
+</RelativeLayout>

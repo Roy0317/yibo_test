@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:clickable="true"
+    android:background="@color/white"
+    android:id="@+id/layout"
+    >
+
+
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="点击跳转在线客服"
+        android:textColor="#5AA3E8"
+        android:gravity="center"
+        />
+
+
+</RelativeLayout>

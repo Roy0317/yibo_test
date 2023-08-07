@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/act_person_data_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title"
+        layout="@layout/chat_top_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#555C63"
+                android:orientation="vertical">
+
+                <com.example.anuo.immodule.view.CircleImageView
+                    android:id="@+id/act_person_data_photo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="10dp"
+                    android:src="@drawable/ic_default_header" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.example.anuo.immodule.view.LastInputEditText
+                        android:id="@+id/act_person_data_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:background="@null"
+                        android:enabled="false"
+                        android:maxLength="8"
+                        android:singleLine="true"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textColorHint="@color/white"
+                        android:textSize="16sp" />
+
+
+                    <ImageView
+                        android:id="@+id/act_person_data_modify_name"
+                        android:layout_width="22dp"
+                        android:layout_height="22dp"
+                        android:layout_marginLeft="10dp"
+                        android:src="@drawable/chat_modify_icon" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/zz_divider1"
+                android:visibility="gone"/>
+
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_data_all_win"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="今日中奖:"
+                app:cpdView_show_right="false"
+                android:visibility="gone"/>
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_data_today_win"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="今日盈亏:"
+                app:cpdView_right_txt="刷新"
+                app:cpdView_show_right="true"
+                android:visibility="gone"/>
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_data_bet"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="今日总投注:"
+                app:cpdView_right_txt="分享"
+                app:cpdView_show_right="false"
+                android:visibility="gone"/>
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_data_recharge_all"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="累计充值:"
+                app:cpdView_show_right="false"
+                android:visibility="gone"/>
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_data_recharge_today"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="今日充值:"
+                app:cpdView_show_right="false"
+                android:visibility="gone"/>
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_data_dml"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="打码量:"
+                app:cpdView_show_right="false"
+                android:visibility="gone"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.8dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/zz_divider1" />
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_notice_send_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="消息发送提示音:"
+                app:cpdView_show_right="false"
+                app:cpdView_switch="true" />
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_notice_recieve_voice"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="消息接收提示音:"
+                app:cpdView_show_right="false"
+                app:cpdView_switch="true" />
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_notice_room"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="进房通知:"
+                app:cpdView_show_right="false"
+                app:cpdView_switch="true" />
+
+            <com.example.anuo.immodule.view.ChatPersonDataView
+                android:id="@+id/act_person_notice_msg"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cpdView_left_txt="消息通知:"
+                app:cpdView_show_right="false"
+                app:cpdView_switch="true" />
+
+            <Button
+                android:id="@+id/act_person_data_commit"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="20dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/selector_bet_green"
+                android:gravity="center"
+                android:text="确认修改"
+                android:textColor="@color/white"
+                android:textSize="15.5sp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

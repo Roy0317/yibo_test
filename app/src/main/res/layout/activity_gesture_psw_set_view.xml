@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:skin="http://schemas.android.com/android/skin"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    skin:enable="true">
+
+    <include android:id="@+id/title"
+        layout="@layout/top_title"/>
+
+
+    <LinearLayout
+        android:id="@+id/ll_content_view"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linearLayout_height"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp">
+
+            <Switch
+                android:id="@+id/sw_gesture_psw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="手势密码"
+                android:textSize="14sp" />
+
+        </FrameLayout>
+
+        <View
+            style="@style/lineHorizontal"
+            android:background="@color/color_cutting_line"
+            skin:enable="true" />
+
+        <FrameLayout
+            android:id="@+id/fl_modify_psw"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linearLayout_height"
+            android:foregroundGravity="center_horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:visibility="visible">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="修改手势密码"
+                android:textSize="14sp"
+                skin:enable="true" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/icon_more"
+                skin:enable="true" />
+        </FrameLayout>
+
+        <View
+            style="@style/lineHorizontal"
+            android:background="@color/color_cutting_line"
+            skin:enable="true" />
+
+        <RelativeLayout
+            android:gravity="center_vertical"
+            android:id="@+id/fl_gesture_lock"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/linearLayout_height"
+            android:foregroundGravity="right|center_horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="10dp"
+            android:visibility="visible">
+
+            <TextView
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="手势密码锁屏时间"
+                android:textSize="14sp"
+                skin:enable="true" />
+
+
+            <TextView
+                android:textColor="@color/red"
+                android:id="@+id/tv_time_setting"
+                android:layout_marginRight="20dp"
+                android:layout_toLeftOf="@+id/iv_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <ImageView
+                android:id="@+id/iv_arrow"
+                android:layout_alignParentEnd="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right|center_vertical"
+                android:src="@drawable/icon_more"
+                skin:enable="true" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <include android:id="@+id/title" layout="@layout/top_title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:background="@color/colorPrimary"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/notice_layout"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_below="@id/banner"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="3dp"
+            android:clickable="true"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/scroll_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:lines="1"
+                android:text="暂无中奖名单"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:textColor="@color/colorWhite"
+                android:gravity="center_vertical"
+                android:ellipsize="marquee"
+                android:singleLine="true"
+                android:drawablePadding="5dp"
+                android:drawableLeft="@drawable/icon_speaker"
+                android:textStyle="bold"
+                android:textSize="14sp"
+                android:layout_marginRight="10dp"
+                android:layout_marginLeft="10dp"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/downtimer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:layout_above="@+id/packets_layout"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:textColor="@color/colorWhite"
+            android:ellipsize="marquee"
+            android:singleLine="true"
+            android:textSize="18sp"
+            android:text="离结束还有0小时"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"/>
+
+    </LinearLayout>
+
+
+        <com.yibo.yiboapp.ui.RedPacketsLayout
+            android:id="@+id/packets_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/rain_bg"
+            />
+
+
+</LinearLayout>

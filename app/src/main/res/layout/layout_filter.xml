@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_search"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingTop="10dp"
+    android:paddingRight="20dp"
+    android:paddingBottom="10dp"
+    android:visibility="gone">
+
+
+    <LinearLayout
+        android:id="@+id/ll_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="end|center_vertical"
+            android:text="时间：" />
+
+
+        <TextView
+            android:id="@+id/tv_start_time"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1.6"
+            android:background="@drawable/edit_text_bg"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:singleLine="true"
+            android:text="请选择开始时间"
+            android:textSize="13sp" />
+
+        <TextView
+            android:id="@+id/tv_"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="—" />
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="1.6"
+            android:background="@drawable/edit_text_bg"
+            android:gravity="center_vertical"
+            android:paddingStart="5dp"
+            android:text="请选择结束时间"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_lottery_type"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp">
+
+        <TextView
+            android:id="@+id/tv_type_title"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:gravity="end|center_vertical"
+            android:text="类型：" />
+
+        <TextView
+            android:id="@+id/tv_type"
+            android:layout_width="0dp"
+            android:layout_height="30dp"
+            android:layout_weight="3.5"
+            android:background="@drawable/edit_text_bg"
+            android:gravity="center_vertical"
+            android:paddingLeft="5dp"
+            android:text="全部类型"
+            android:textSize="13sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7" />
+
+
+        <Button
+            android:id="@+id/btn_cancel"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_weight="1.7"
+            android:background="@drawable/btn_cancel_bg"
+            android:text="取消" />
+
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="0dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="1.7"
+            android:background="@drawable/btn_confirm_bg"
+            android:text="确认"
+            android:textColor="@color/white" />
+    </LinearLayout>
+
+</LinearLayout>

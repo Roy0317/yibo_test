@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/light_gred_border_middle_segment_selector"
+    android:clickable="true"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="15dp"
+    android:id="@+id/item"
+    tools:context="com.yibo.yiboapp.fragment.JiangjinFragment">
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        />
+
+    <TextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="3dp"
+        android:lines="1"
+        android:textSize="12sp"
+        android:textColor="@color/grey"
+        android:text="正在获取..."/>
+
+</LinearLayout>

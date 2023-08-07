@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.donkingliang:CustomBanner:1.1.2@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/0140c7b984f4c55a303a32616758272a/transformed/jetified-CustomBanner-1.1.2/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0140c7b984f4c55a303a32616758272a/transformed/jetified-CustomBanner-1.1.2/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/0140c7b984f4c55a303a32616758272a/transformed/jetified-CustomBanner-1.1.2/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
